@@ -1,0 +1,491 @@
+﻿using UnityEngine;
+using UnityEngine.UI;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+
+public class Main2 : MonoBehaviour {
+struct PVAVector3D {
+	public float x, y, z;
+};
+
+struct PVATDetectData {
+	public uint time;
+	public PVAVector3D pos;
+};
+
+struct PVATDetectInfo {
+	public int flags;
+	public int hit_num;
+	public IntPtr hit_data;
+};
+
+	[DllImport("PVAT")]
+	private static extern void PVAT_init();
+
+	[DllImport("PVAT")]
+	private static extern void PVAT_term();
+
+	[DllImport("PVAT")]
+	private static extern int PVAT_getCamraStatus();
+
+	[DllImport("PVAT")]
+	private static extern int PVAT_config(IntPtr hWnd);
+
+	[DllImport("PVAT")]
+	private static extern void PVAT_startBall();
+
+	[DllImport("PVAT")]
+	private static extern void PVAT_endBall();
+
+	[DllImport("PVAT")]
+	private static extern int PVAT_getDetect(ref PVATDetectInfo detect);
+
+	[DllImport("PVAT")]
+	private static extern int PVAT_getBatterSide(ref int side);
+
+	[DllImport("PVAT", CharSet = CharSet.Ansi)]
+	private static extern int PVAT_getSysInt(string name);
+
+	[DllImport("PVAT", CharSet = CharSet.Ansi)]
+	private static extern int PVAT_setSysInt(string name,int value);
+
+	// Use this for initialization
+	void Start(){
+		if( m_bPVAT == false )
+		{
+			PVAT_init();
+			//m_isRunning = true;
+			m_bPVAT = true;
+		}
+
+		m_objCanvas = GameObject.FindWithTag("Canvas");
+
+		m_objSignal = Instantiate(prefabSignal);
+		m_objSignal.transform.SetParent(m_objCanvas.transform, false);
+		setSignal(0);
+
+		m_objGage = Instantiate(prefabGage);
+		m_objGage.transform.SetParent(m_objCanvas.transform, false);
+		m_objGage.SetActive(false);
+
+		m_objPhase = addSysInfo("Phase");
+		m_objCamSts = addSysInfo("Camra");
+		m_objFPS = addSysInfo("FPS");
+		//m_objRecIndex = addSysInfo("RecIndex");
+		m_objRecIndex = addSysInfo("PVAT.bin");
+
+		m_smoothFollow = GetComponent<SmoothFollow>();
+		GameObject objCanvas2 = GameObject.FindWithTag("Canvas2");
+ {
+		GameObject objTopView = objCanvas2.transform.FindChild("TopView").gameObject;
+		GameObject objTrail = objTopView.transform.FindChild("NewTrail").gameObject;
+		m_topView = objTrail.GetComponent<View2D>();
+ }
+ {
+		GameObject objTopView = objCanvas2.transform.FindChild("SideView").gameObject;
+		GameObject objTrail = objTopView.transform.FindChild("NewTrail").gameObject;
+		m_sideView = objTrail.GetComponent<View2D>();
+ }
+		setPhase( Phase_Wait );
+	}
+	void OnDestroy(){
+		endBall();
+		if( m_bPVAT != false )
+		{
+			PVAT_term();
+			m_bPVAT = false;
+		}
+	}
+
+	// Update is called once per frame
+	void Update () {
+		if( m_bPVAT == false )
+			return;
+
+		int ret;
+		ret = PVAT_getCamraStatus();
+		if( m_status != ret ){
+			string text;
+			switch( ret ){
+			case PVATResult_OK:
+				text = "OK"; break;
+			case PVATResult_Uninitialize:
+				text = "Uninitialize"; break;
+			case PVATResult_NotConnect:
+				text = "NotConnect"; break;
+			case PVATResult_DongleNotFound:
+				text = "DongleNotFound"; break;
+			case PVATResult_NoFPS:
+				text = "NoFPS"; break;
+			case PVATResult_NoData:
+				text = "NoData"; break;
+			default:
+				text = "Unknown"; break;
+			}
+			setSysInfo(m_objCamSts, text);
+
+			m_status = ret;
+		}
+		if( m_status != PVATResult_OK )
+			return;
+
+		int nFPS = PVAT_getSysInt("FPS");
+		if( m_nFPS != nFPS ){
+			m_nFPS = nFPS;
+			setSysInfo(m_objFPS, nFPS.ToString());
+		}
+
+		if( m_objHit != null ){
+			Vector3 pos = m_objHit.transform.localPosition;
+			m_topView.setPos( pos );
+			m_sideView.setPos( pos );
+			//Debug.Log( pos.x.ToString() + " " + pos.y.ToString() + " " + pos.z.ToString() );
+		}
+
+		if( m_nPhase == Phase_Wait ){
+			m_dTime += Time.deltaTime;
+			if( m_dTime >= WaitTime )
+				setPhase( Phase_Busy );
+		}
+		else if( m_nPhase == Phase_Busy ){
+			int busy;
+			busy = PVAT_getSysInt("Busy");
+			if( busy == 0 ){
+				int bLog = PVAT_getSysInt("Log");
+				if( bLog != 0 ){
+					int nRecIndex = PVAT_getSysInt("RecIndex");
+					setSysInfo(m_objRecIndex, nRecIndex.ToString());
+				}
+
+				startBall();
+				setSignal(1);
+				setPhase( Phase_Ready );
+				m_objGage.SetActive(true);
+			}
+		}
+		else if( m_nPhase == Phase_Ready ){
+			ret = PVAT_getDetect( ref m_detect );
+			if( ret == PVATResult_OK ){
+				m_objGage.SetActive(false);
+				endBall();
+
+				IntPtr pData;
+				if( (m_detect.flags & PVATFlg_Hit) != 0 ){
+					pData = m_detect.hit_data;
+
+					PVATDetectData first = (PVATDetectData)Marshal.PtrToStructure(pData, typeof(PVATDetectData));
+					//pData = new IntPtr(pData.ToInt32() + Marshal.SizeOf(typeof(PVATDetectData)));
+					pData = new IntPtr(pData.ToInt64() + Marshal.SizeOf(typeof(PVATDetectData)));
+					PVATDetectData last = (PVATDetectData)Marshal.PtrToStructure(pData, typeof(PVATDetectData));
+
+					startHit( first, last );
+					setSignal(0);
+					setPhase( Phase_Wait );
+				}
+			}
+			else{
+				m_dTime -= Time.deltaTime;
+
+				float ratio = m_dTime / ReadyTime;
+				UnityEngine.UI.Image image = m_objGage.GetComponent<UnityEngine.UI.Image>();
+				if( ratio < 0 )
+					ratio = 0;
+
+				image.fillAmount = ratio;
+				//prefabSpeed.text = "ratio: " + ratio.ToString("f2");
+
+				if( ratio == 0 ){
+					m_objGage.SetActive(false);
+					endBall();
+					setSignal(0);
+					setPhase( Phase_Wait );
+				}
+			}
+		}
+		if( m_smoothFollow.getTarget() ){
+			m_smoothFollow.Update();
+		}
+	}
+	void startBall()
+	{
+		if( m_bStart == false )
+		{
+			PVAT_startBall();
+			m_bStart = true;
+		}
+	}
+	void endBall()
+	{
+		if( m_bStart != false )
+		{
+			PVAT_endBall();
+			m_bStart = false;
+		}
+	}
+	void startHit(PVATDetectData first,PVATDetectData last)
+	{
+		m_pos0 = first.pos;
+		m_pos1 = last.pos;
+
+		uint send_time = last.time - first.time;
+		float t = (float)1000 / (float)send_time;
+
+		m_dir.x = m_pos1.x - m_pos0.x;
+		m_dir.y = m_pos1.y - m_pos0.y;
+		m_dir.z = m_pos1.z - m_pos0.z;
+		float speed = m_dir.magnitude * t;
+		m_dir.Normalize();
+
+		Vector2 angle = calcVecAngle( m_dir );
+
+		m_dir.z = -m_dir.z;
+
+		GameObject gage = addHitGage();
+		setHitSpeed( gage, speed * MPS2KPH );
+		setHitAngle( gage, angle.x * RAD2DEG );
+
+		GameObject ball = Instantiate(prefabBallHit);
+		BallHit ball_hit = ball.GetComponent<BallHit>();
+		ball_hit.setGage( gage );
+
+		ball.transform.localPosition = new Vector3(m_pos0.x, m_pos0.y, -m_pos0.z);
+
+		Rigidbody rb = ball.GetComponent<Rigidbody>();
+		rb.velocity = m_dir * speed;
+
+		if( m_bFollow == true ){
+			m_smoothFollow.setTarget( ball );
+			m_objCanvas.SetActive( false );
+		}
+
+		m_topView.clear();
+		m_topView.setPos( ball.transform.localPosition );
+
+		m_sideView.clear();
+		m_sideView.setPos( ball.transform.localPosition );
+
+		m_objHit = ball;
+	}
+	void setPhase(int phase)
+	{
+		m_nPhase = phase;
+
+		string text;
+		switch( phase ){
+		case Phase_Wait:
+			text = "Wait";
+			m_dTime = 0;
+			break;
+		case Phase_Busy:
+			text = "Busy";
+			break;
+		case Phase_Ready:
+			text = "Ready";
+			m_dTime = ReadyTime;
+			break;
+		default:
+			text = "???";
+			break;
+		}
+		//prefabStatus.text = "phase:" + text;
+		setSysInfo(m_objPhase, text);
+	}
+	void setSignal(int index)
+	{
+		Image img = m_objSignal.GetComponent<Image>();
+		//if( img.material.mainTexture != null )
+		//	img.material.mainTexture = null;
+		//img.material.mainTexture = prefabTextures[index];
+		img.sprite = prefabSprite[index];
+	}
+	void OnGUI()
+	{
+		Event e = Event.current;
+		if( e.isKey ){
+			//Debug.Log("Detected character: " + e.character);
+			if( e.character == 'c' || e.character == 'C' ){
+				PVAT_config( IntPtr.Zero );
+			}
+		}
+	}
+	public void HitGround(GameObject ball){
+		Vector3 pos = ball.transform.localPosition;
+
+		Vector3 org = new Vector3(0, 0, 0);
+		float distance = Vector3.Distance( org, pos );
+
+		BallHit ball_hit = ball.GetComponent<BallHit>();
+		GameObject gage = ball_hit.getGage();
+		setHitDistance( gage, distance );
+
+		if( ball == m_objHit )
+			m_objHit = null;
+
+		if( ball == m_smoothFollow.getTarget() ){
+			m_smoothFollow.setTarget(null);
+			//transform.localPosition = new Vector3(0, 1.35f, 0);
+			transform.position = new Vector3(0, 1.35f, 0);
+			transform.eulerAngles = new Vector3(0, 0, 0);
+			m_objCanvas.SetActive( true );
+		}
+		//Debug.Log( "Distance: " + distance.ToString("f2") + " m" );
+	}
+	GameObject addHitGage(){
+		GameObject obj = Instantiate(prefabHitGage);
+		obj.transform.localPosition = new Vector3(0, 0, 0);
+		obj.transform.SetParent(m_objCanvas.transform, false);
+
+		int size = m_objArray.Count;
+		int nNo = size + 1;
+		GameObject objNo = obj.transform.FindChild("no").gameObject;
+		Text tx = objNo.GetComponent<Text>();
+		tx.text = nNo.ToString();
+
+		m_objArray.Add( obj );
+
+		for(int i = size-1; i >= 0; i--){
+			GameObject obj2 = m_objArray[i];
+			Vector3 pos = obj2.transform.localPosition;
+			pos.y -= HitGageHeight;
+			obj2.transform.localPosition = pos;
+		}
+		return obj;
+	}
+	void setHitSpeed(GameObject obj,float speed){
+		GameObject objSpeed = obj.transform.FindChild("speed").gameObject;
+		Text tx = objSpeed.GetComponent<Text>();
+		//tx.text = speed.ToString("f2") + " Km/H";
+		tx.text = (int)speed + " Km/H";
+	}
+	void setHitAngle(GameObject obj,float angle){
+		GameObject objSpeed = obj.transform.FindChild("angle").gameObject;
+		Text tx = objSpeed.GetComponent<Text>();
+		//tx.text = angle.ToString("f2") + " deg";
+		tx.text = (int)angle + " deg";
+	}
+	void setHitDistance(GameObject obj,float distance){
+		GameObject objDistance = obj.transform.FindChild("distance").gameObject;
+		Text tx = objDistance.GetComponent<Text>();
+		tx.text= distance.ToString("f2") + " m";
+	}
+	Vector2 calcVecAngle(Vector3 vec)
+	{
+		float angle_y = -Mathf.Atan2(vec.x, -vec.z);
+		float yrot = -angle_y;
+		float vec_z = -vec.x * Mathf.Sin( yrot ) + vec.z * Mathf.Cos( yrot );
+		float angle_x = Mathf.Atan2(vec.y, -vec_z);
+
+		return new Vector2(angle_x, angle_y);
+	}
+	GameObject addSysInfo(string name){
+		GameObject obj = Instantiate(prefabSysInfo);
+		obj.transform.localPosition = new Vector3(0, m_posSysInfo, 0);
+		obj.transform.SetParent(m_objCanvas.transform, false);
+
+		GameObject objName = obj.transform.FindChild("name").gameObject;
+		objName.GetComponent<Text>().text = name;
+
+		m_posSysInfo -= SysInfoHeight;
+
+		return obj;
+	}
+	void setSysInfo(GameObject obj,string value){
+		GameObject objValue = obj.transform.FindChild("value").gameObject;
+		objValue.GetComponent<Text>().text = value;
+	}
+	/*GameObject addSysToggle(string name){
+		GameObject obj = Instantiate(prefabSysToggle);
+		obj.transform.localPosition = new Vector3(0, m_posSysInfo, 0);
+		obj.transform.SetParent(m_objCanvas.transform, false);
+
+		GameObject objName = obj.transform.FindChild("name").gameObject;
+		objName.GetComponent<Text>().text = name;
+
+		Toggle toggle = obj.GetComponent<Toggle>();
+		int value = PVAT_getSysInt( name );
+		toggle.isOn = (value != 0)? true: false;
+
+		m_posSysInfo -= SysInfoHeight;
+
+		return obj;
+	}*/
+	public void onValueChanged(GameObject obj)
+	{
+		GameObject objName = obj.transform.FindChild("name").gameObject;
+		string name = objName.GetComponent<Text>().text;
+
+		Toggle toggle = obj.GetComponent<Toggle>();
+		int value = toggle.isOn? 1: 0;
+		PVAT_setSysInt( name, value );
+	}
+
+	public GameObject prefabBallHit;
+	public GameObject prefabGage;
+	public GameObject prefabHitGage;
+	public GameObject prefabSignal;
+	public GameObject prefabSysInfo;
+	//public GameObject prefabSysToggle;
+	public Sprite[] prefabSprite;
+	//public Text prefabSpeed;
+	//public Text prefabDistance;
+	//public Text prefabStatus;
+
+	private List<GameObject> m_objArray = new List<GameObject>();
+
+	private const int Phase_Wait            = 0;
+	private const int Phase_Busy            = 1;
+	private const int Phase_Ready           = 2;
+
+	private const int PVATResult_OK             = 0;
+	private const int PVATResult_Uninitialize   = -1;
+	private const int PVATResult_NotConnect     = -2;
+	private const int PVATResult_DongleNotFound = -5;
+	private const int PVATResult_NoFPS          = -6;
+	private const int PVATResult_NoData         = -7;
+	private const int PVATResult_Unknown        = -100;
+	private const int PVATFlg_Hit               = 0x02;
+
+	private const int PVASide_None  = 0;
+	private const int PVASide_Left  = 1;
+	private const int PVASide_Right = 2;
+
+	private const float KPH2MPS = (1000.0f / 3600.0f);
+	private const float MPS2KPH = (3600.0f / 1000.0f);
+
+	private const float RAD2DEG = (180.0f / Mathf.PI);
+	private const float DEG2RAD = (Mathf.PI / 180.0f);
+
+	//private const float ReadyTime = 4.0f;
+	private const float ReadyTime = 5.0f;
+	private const float WaitTime = 2.0f;
+	//private const float HitGageHeight = 36.0f;
+	private const float HitGageHeight = 24.0f;
+	private const float SysInfoHeight = 25.0f;
+
+	private PVATDetectInfo m_detect = new PVATDetectInfo();
+	private GameObject m_objCanvas;
+	private GameObject m_objGage = null;
+	private GameObject m_objSignal = null;
+	private GameObject m_objPhase = null;
+	private GameObject m_objCamSts = null;
+	private GameObject m_objFPS = null;
+	private GameObject m_objRecIndex = null;
+	private GameObject m_objHit = null;
+	private SmoothFollow m_smoothFollow = null;
+	private View2D m_topView = null;
+	private View2D m_sideView = null;
+
+	private PVAVector3D m_pos0, m_pos1;
+	private Vector3 m_dir = new Vector3();
+
+	private bool m_bPVAT = false;
+	private bool m_bStart = false;
+	private bool m_bFollow = true;
+	private int m_nPhase;
+	private int m_status = PVATResult_Uninitialize;
+	private int m_nFPS = -1;
+	private float m_dTime = 0;
+	private float m_posSysInfo = 0;
+}
