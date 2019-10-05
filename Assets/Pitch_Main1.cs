@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using GigaTrax.Ports;
 using GigaTrax.PVA;
+using GigaTrax;
 using TMPro;
 
 public class HitRecord {
@@ -47,10 +48,6 @@ public class Pitch_Main1 : MonoBehaviour {
 		m_PVACtrl.init();
 
 		m_Port = new SerialPort();
-		Port_Open();
-		Port_DataSend("Y");
-		Port_DataSend("SU23");
-		Port_DataSend("SD22");
 
 		//if( Display.displays.Length > 1 )
 		//	Display.displays[1].Activate();
@@ -67,10 +64,8 @@ public class Pitch_Main1 : MonoBehaviour {
 		m_objInfo1 = m_objMainCanvas.transform.Find("Info1").gameObject;
 		m_objInfo2 = m_objMainCanvas.transform.Find("Info2").gameObject;
 
-		//m_objKioskCanvas = GameObject.FindWithTag("KioskCanvas");
-
-		//m_objSignal = Instantiate(prefabSignal);
-		//m_objSignal.transform.SetParent(m_objInfo2.transform, false);
+		GameObject objBatter = GameObject.FindWithTag("Batter");
+		m_objBatter = objBatter.GetComponent<BatterAnim>();
 
 		m_objGage = Instantiate(prefabGage);
 		m_objGage.transform.SetParent(m_objMainCanvas.transform, false);
@@ -95,13 +90,17 @@ public class Pitch_Main1 : MonoBehaviour {
 
 		setGamePhase( GamePhase_Busy );
 		setSensorPhase( SensorPhase_Busy );
+		//m_objBatter.setBatterSide( BatterSide_None );
 	}
 	void OnDestroy(){
 		m_PVACtrl.endBall();
 		m_PVACtrl.term();
 
-		Port_DataSend("T");
-		Port_Close();
+		if( m_bPortInit ){
+			Port_DataSend("T"); /*Motor OFF*/
+			Port_Close();
+			m_bPortInit = false;
+		}
 	}
 
 	// Update is called once per frame
@@ -132,12 +131,21 @@ public class Pitch_Main1 : MonoBehaviour {
 				default:
 					text = "Unknown"; break;
 				}
-				Debug.Log( "CamraStatus:" + text );
+				GigaTrax.Debug.Log( "CamraStatus:" + text );
 			}
 		}
 		if( m_status != PVAResult.OK )
 			return;
 
+		m_objBatter.setBatterSide( m_PVACtrl.getSysInt("BatterSide") );
+
+		if( !m_bPortInit ){
+			Port_Open();
+			Port_DataSend("Y"); /*Motor ON*/
+			Port_DataSend("SU23"); /*Upper Wheel*/
+			Port_DataSend("SD23"); /*Lower Wheel*/
+			m_bPortInit = true;
+		}
 		switch( m_nSensorPhase ){
 		case SensorPhase_Busy:{
 			int busy;
@@ -161,7 +169,6 @@ public class Pitch_Main1 : MonoBehaviour {
 					PVADetectData last = (PVADetectData)Marshal.PtrToStructure(pData, typeof(PVADetectData));
 
 					startHit( first, last );
-					setGamePhase( GamePhase_Hit );
 				}
 			}
 			else{
@@ -169,10 +176,9 @@ public class Pitch_Main1 : MonoBehaviour {
 					m_PVACtrl.endBall();
 					setSensorPhase(SensorPhase_Busy);
 
-					//Debug.Log("mousePosition: " + Input.mousePosition);
-					resetView();
+					//GigaTrax.Debug.Log("mousePosition: " + Input.mousePosition);
+					//resetView();
 					startHit2();
-					setGamePhase( GamePhase_Hit );
 				}
 			}
 			break;}
@@ -200,7 +206,7 @@ public class Pitch_Main1 : MonoBehaviour {
 
 			if( m_bPush == false ){
 				if( m_dTime < PushTime ){
-					Port_DataSend("G");
+					Port_DataSend("G"); /*Push*/
 					m_bPush = true;
 				}
 			}
@@ -278,6 +284,7 @@ public class Pitch_Main1 : MonoBehaviour {
 			if( num_hit == 0 ){
 				resetView();
 				setGamePhase( GamePhase_Busy );
+				m_objBatter.setAnim( BatterAnim.BatterAnim_Idle );
 			}
 		}
 
@@ -313,28 +320,44 @@ public class Pitch_Main1 : MonoBehaviour {
 	void startHit(PVADetectData first,PVADetectData last)
 	{
 		if( m_bPhaseLog )
-			Debug.Log( "startHit" );
+			GigaTrax.Debug.Log( "startHit" );
 		m_pos0 = first.pos;
 		m_pos1 = last.pos;
 
 		uint send_time = last.time - first.time;
 		float t = (float)1000 / (float)send_time;
 
-		m_dir.x = m_pos1.x - m_pos0.x;
-		m_dir.y = m_pos1.y - m_pos0.y;
-		m_dir.z = m_pos1.z - m_pos0.z;
-		float speed = m_dir.magnitude * t;
-		m_dir.Normalize();
+		Vector3 dir = new Vector3();
+		dir.x = m_pos1.x - m_pos0.x;
+		dir.y = m_pos1.y - m_pos0.y;
+		dir.z = m_pos1.z - m_pos0.z;
+		float speed = dir.magnitude * t;
+		dir.Normalize();
+		dir.z = -dir.z;
+		startHit_( new Vector3(m_pos0.x, m_pos0.y, -m_pos0.z), dir, speed );
+	}
+	void startHit2()
+	{
+		if( m_bPhaseLog )
+			GigaTrax.Debug.Log( "startHit2" );
+		//int ispeed = 120;
+		int ispeed = UnityEngine.Random.Range( 8, 13 ) * 10;
+		float speed = (float)ispeed * KPH2MPS;
 
-		m_dir.z = -m_dir.z;
-
+		Ray ray = m_objCamera.ScreenPointToRay( Input.mousePosition );
+		Vector3 dir = ray.direction;
+		Vector3 pos = ray.origin;
+		startHit_( pos, dir, speed );
+	}
+	void startHit_(Vector3 pos,Vector3 dir,float speed)
+	{
 		HitRecord record = addHitRecord();
 		record.speed = speed * MPS2KPH;
 
-		calcBallAngleInfo( m_dir, record );
+		calcBallAngleInfo( dir, record );
 		setBallSpeedInfo( record.speed );
 		setBallAngleInfo( record );
-		//setLRAngleInfo( m_dir );
+		//setLRAngleInfo( dir );
 		//clearLRDistInfo();
 		clearFlyDistInfo(); // clear 飛距離 on new ball
 		updateHitRecord();
@@ -344,10 +367,10 @@ public class Pitch_Main1 : MonoBehaviour {
 		//ball_hit.setRecord( record );
 		record.ball = ball;
 
-		ball.transform.localPosition = new Vector3(m_pos0.x, m_pos0.y, -m_pos0.z);
+		ball.transform.localPosition = pos;
 
 		Rigidbody rb = ball.GetComponent<Rigidbody>();
-		rb.velocity = m_dir * speed;
+		rb.velocity = dir * speed;
 
 		addHitInfo( ball, record.speed );
 
@@ -355,118 +378,60 @@ public class Pitch_Main1 : MonoBehaviour {
 			m_smoothFollow.setTarget( ball );
 		}
 		m_lastHit = addHitBall( ball );
-	}
-	void startHit2()
-	{
-		if( m_bPhaseLog )
-			Debug.Log( "startHit2" );
-		//int ispeed = 120;
-		int ispeed = UnityEngine.Random.Range( 8, 13 ) * 10;
-		float speed = (float)ispeed * KPH2MPS;
 
-		Ray ray = m_objCamera.ScreenPointToRay( Input.mousePosition );
-
-		HitRecord record = addHitRecord();
-		record.speed = speed * MPS2KPH;
-
-		calcBallAngleInfo( ray.direction, record );
-		setBallSpeedInfo( record.speed );
-		setBallAngleInfo( record );
-		//setLRAngleInfo( ray.direction );
-		//clearLRDistInfo();
-		clearFlyDistInfo();  // clear 飛距離 on new ball
-		updateHitRecord();
-
-		GameObject ball = Instantiate(prefabBallHit);
-		BallHit ball_hit = ball.GetComponent<BallHit>();
-		//ball_hit.setRecord( record );
-		record.ball = ball;
-
-		ball.transform.localPosition = ray.origin;
-
-		Rigidbody rb = ball.GetComponent<Rigidbody>();
-		rb.velocity = ray.direction * speed;
-
-		addHitInfo( ball, record.speed );
-
-		if( m_smoothFollow ){
-			m_smoothFollow.setTarget( ball );
-		}
-		m_lastHit = addHitBall( ball );
+		setGamePhase( GamePhase_Hit );
+		m_objBatter.setAnim( BatterAnim.BatterAnim_Hit );
 	}
 	void setSensorPhase(int phase)
 	{
 		m_nSensorPhase = phase;
 
-		string text;
-		switch( phase ){
-		case SensorPhase_Busy:
-			text = "Busy";
-			break;
-		case SensorPhase_Ready:
-			text = "Ready";
-			break;
-		case SensorPhase_Start:
-			text = "Start";
-			break;
-		default:
-			text = "???";
-			break;
+		if( m_bPhaseLog ){
+			string text;
+			switch( phase ){
+			case SensorPhase_Busy: text = "Busy"; break;
+			case SensorPhase_Ready: text = "Ready"; break;
+			case SensorPhase_Start: text = "Start"; break;
+			default: text = "???"; break;
+			}
+			GigaTrax.Debug.Log( "Sensor:" + text );
 		}
-		if( m_bPhaseLog )
-			Debug.Log( "Sensor:" + text );
 	}
 	void setGamePhase(int phase)
 	{
 		m_nGamePhase = phase;
 
-		string text;
 		switch( phase ){
-		case GamePhase_Busy:
-			text = "Busy";
-			break;
-		case GamePhase_Ready:
-			text = "Ready";
-			break;
 		case GamePhase_CountDonw:
-			text = "CountDonw";
 			m_dTime = CountDonwTime;
 			break;
 		case GamePhase_Start:
-			text = "Start";
 			m_dTime = StartTime;
 			break;
-		case GamePhase_Hit:
-			text = "Hit";
-			break;
 		default:
-			text = "???";
+			m_dTime = 0;
 			break;
 		}
-		if( m_bPhaseLog )
-			Debug.Log( "Game:" + text );
+		if( m_bPhaseLog ){
+			string text;
+			switch( phase ){
+			case GamePhase_Busy: text = "Busy"; break;
+			case GamePhase_Ready: text = "Ready"; break;
+			case GamePhase_CountDonw: text = "CountDonw"; break;
+			case GamePhase_Start: text = "Start"; break;
+			case GamePhase_Hit: text = "Hit"; break;
+			default: text = "???"; break;
+			}
+			GigaTrax.Debug.Log( "Game:" + text );
+		}
 	}
 	void OnGUI()
 	{
 		Event e = Event.current;
-
-		/*if( e.type != EventType.Layout && e.type != EventType.Repaint )
-		{
-			Debug.Log(e);
-		}*/
-
 		if( e.isKey ){
-			//Debug.Log("Detected character: " + e.character);
 			if( e.character == 'c' || e.character == 'C' ){
 				m_PVACtrl.config();
 			}
-			//if( e.type == EventType.ValidateCommand && e.commandName == "Paste" )
-		}
-		if( e.type == EventType.ValidateCommand )
-		{
-			Debug.Log( e.commandName );
-			//Debug.Log("validate paste");
-			//e.Use(); // without this line we won't get ExecuteCommand
 		}
 	}
 	public void HitGround(GameObject ball){
@@ -497,7 +462,7 @@ public class Pitch_Main1 : MonoBehaviour {
 		//if( m_nGamePhase != GamePhase_HitGround && ball == m_lastHit.obj ){
 		//	setGamePhase( GamePhase_HitGround );
 		//}
-		//Debug.Log( "Distance: " + distance.ToString("f2") + " m" );
+		//GigaTrax.Debug.Log( "Distance: " + distance.ToString("f2") + " m" );
 		int num_hit = m_HitArray.Count;
 		for(int i = 0; i < num_hit; i++){
 			HitBall hit = m_HitArray[i];
@@ -786,12 +751,12 @@ public class Pitch_Main1 : MonoBehaviour {
 	private void Port_Open()
 	{
 		if( m_bPortLog ){
-			Debug.Log("Port_Open");
+			GigaTrax.Debug.Log("Port_Open");
 		}
 		if( m_bEnablePort ){
 			m_Port.PortName = "COM1";
-			//m_Port.BaudRate = 19200;
-			m_Port.BaudRate = 115200;
+			m_Port.BaudRate = 19200;
+			//m_Port.BaudRate = 115200;
 			m_Port.DataBits = 8;
 			m_Port.StopBits = StopBits.One;
 			m_Port.Parity = Parity.None;
@@ -809,7 +774,7 @@ public class Pitch_Main1 : MonoBehaviour {
 	private void Port_Close()
 	{
 		if( m_bPortLog ){
-			Debug.Log("Port_Close");
+			GigaTrax.Debug.Log("Port_Close");
 		}
 		if( m_bEnablePort ){
 			if( m_Port.IsOpen ){
@@ -820,7 +785,7 @@ public class Pitch_Main1 : MonoBehaviour {
 	public void Port_DataSend(string snd)
 	{
 		if( m_bPortLog ){
-			Debug.Log("Port_DataSend:" + snd);
+			GigaTrax.Debug.Log("Port_DataSend:" + snd);
 		}
 		if( m_bEnablePort ){
 			if( m_Port.IsOpen ){
@@ -865,7 +830,9 @@ public class Pitch_Main1 : MonoBehaviour {
 	private const float RAD2DEG = (180.0f / Mathf.PI);
 	private const float DEG2RAD = (Mathf.PI / 180.0f);
 
-	private const float PushTime = 1.0f;
+	//private const float PushTime = 1.0f;
+	//private const float PushTime = 0.8f;
+	private const float PushTime = 0.175f;
 	private const float CountDonwTime = 3.0f;
 	private const float StartTime = 5.0f;
 	private const float MainSpeedLife = 3;
@@ -889,6 +856,8 @@ public class Pitch_Main1 : MonoBehaviour {
 	private GameObject m_objInfo2;
 	private GameObject m_objGage = null;
 	private GameObject m_objReady = null;
+	//private GameObject m_objBatter;
+	private BatterAnim m_objBatter;
 	private HitBall m_lastHit = null;
 	private Camera m_objCamera = null;
 	private SmoothFollow m_smoothFollow = null;
@@ -896,17 +865,17 @@ public class Pitch_Main1 : MonoBehaviour {
 	private TrailView m_sideView = null;
 
 	private PVAVector3D m_pos0, m_pos1;
-	private Vector3 m_dir = new Vector3();
 	private List<Vector3> m_posArray = new List<Vector3>();
 	private List<HitRecord> m_RecordArray = new List<HitRecord>();
 	private List<HitBall> m_HitArray = new List<HitBall>();
 	private List<HitInfo> m_HitInfoArray = new List<HitInfo>();
 
-	private bool m_bPortLog = false;
-	private bool m_bEnablePort = false;
+	private bool m_bPortInit = false;
+	private bool m_bPortLog = true;
+	private bool m_bEnablePort = true;
 	//private bool m_bFollow = true;
 	private bool m_bPush = false;
-	private bool m_bPhaseLog = false;
+	private bool m_bPhaseLog = true;
 	private int m_nGamePhase;
 	private int m_nSensorPhase;
 	private PVAResult m_status = PVAResult.Uninitialize;
