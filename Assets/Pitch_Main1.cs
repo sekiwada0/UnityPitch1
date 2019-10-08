@@ -8,6 +8,7 @@ using GigaTrax.Ports;
 using GigaTrax.PVA;
 using GigaTrax;
 using TMPro;
+using UnityRawInput;
 
 public class HitRecord {
 	public GameObject ball;
@@ -88,6 +89,9 @@ public class Pitch_Main1 : MonoBehaviour {
 		GameObject objSideView = m_objMainCanvas.transform.Find("SideView").gameObject;
 		m_sideView = objSideView.GetComponent<TrailView>();
 
+		bool workInBackground = true;
+		RawKeyInput.Start(workInBackground);
+
 		setGamePhase( GamePhase_Busy );
 		setSensorPhase( SensorPhase_Busy );
 		//m_objBatter.setBatterSide( BatterSide_None );
@@ -95,6 +99,7 @@ public class Pitch_Main1 : MonoBehaviour {
 	void OnDestroy(){
 		m_PVACtrl.endBall();
 		m_PVACtrl.term();
+		RawKeyInput.Stop();
 
 		if( m_bPortInit ){
 			Port_DataSend("T"); /*Motor OFF*/
@@ -137,7 +142,9 @@ public class Pitch_Main1 : MonoBehaviour {
 		if( m_status != PVAResult.OK )
 			return;
 
-		m_objBatter.setBatterSide( m_PVACtrl.getSysInt("BatterSide") );
+		int nBatterSide = m_PVACtrl.getSysInt("BatterSide");
+		//int nBatterSide = 1;
+		m_objBatter.setBatterSide( nBatterSide );
 
 		if( !m_bPortInit ){
 			Port_Open();
@@ -192,26 +199,34 @@ public class Pitch_Main1 : MonoBehaviour {
 			}
 			break;
 		case GamePhase_Ready:
-			if( Input.GetKey(KeyCode.M) ){
-				if( Input.GetKey(KeyCode.RightControl) || Input.GetKey(KeyCode.LeftControl) ){
+			if( RawKeyInput.IsKeyDown(RawKey.M) ){
+				if( RawKeyInput.IsKeyDown(RawKey.RightControl) || RawKeyInput.IsKeyDown(RawKey.LeftControl) ){
 					setGamePhase( GamePhase_CountDonw );
 					m_objReady.SetActive(false);
 					m_objGage.SetActive(true);
 					m_bPush = false;
+					m_bStart = false;
 				}
 			}
 			break;
 		case GamePhase_CountDonw:{
 			m_dTime -= Time.deltaTime;
 
-			if( m_bPush == false ){
+			if( !m_bStart ){
+				if( m_dTime < SensorStartTime ){
+					m_PVACtrl.startBall();
+					setSensorPhase( SensorPhase_Start );
+					m_bStart = true;
+				}
+			}
+			if( !m_bPush ){
 				if( m_dTime < PushTime ){
 					Port_DataSend("G"); /*Push*/
 					m_bPush = true;
 				}
 			}
 
-			float ratio = m_dTime / CountDonwTime;
+			float ratio = m_dTime / CountDonwDuration;
 			UnityEngine.UI.Image image = m_objGage.GetComponent<UnityEngine.UI.Image>();
 			if( ratio < 0 )
 				ratio = 0;
@@ -219,8 +234,8 @@ public class Pitch_Main1 : MonoBehaviour {
 			//prefabSpeed.text = "ratio: " + ratio.ToString("f2");
 
 			if( ratio == 0 ){
-				m_PVACtrl.startBall();
-				setSensorPhase( SensorPhase_Start );
+				//m_PVACtrl.startBall();
+				//setSensorPhase( SensorPhase_Start );
 				setGamePhase( GamePhase_Start );
 				m_objGage.SetActive(false);
 			}
@@ -403,10 +418,10 @@ public class Pitch_Main1 : MonoBehaviour {
 
 		switch( phase ){
 		case GamePhase_CountDonw:
-			m_dTime = CountDonwTime;
+			m_dTime = CountDonwDuration;
 			break;
 		case GamePhase_Start:
-			m_dTime = StartTime;
+			m_dTime = StartDuration;
 			break;
 		default:
 			m_dTime = 0;
@@ -468,7 +483,7 @@ public class Pitch_Main1 : MonoBehaviour {
 			HitBall hit = m_HitArray[i];
 			if( hit.obj == ball ){
 				hit.ground = true;
-				hit.dTime = HitGroundTime;
+				hit.dTime = HitGroundDuration;
 				break;
 			}
 		}
@@ -482,7 +497,7 @@ public class Pitch_Main1 : MonoBehaviour {
 				info.distance = distance;
 				updateHitInfo( info );
 
-				Destroy( info.objInfo, HitInfoTime );
+				Destroy( info.objInfo, HitInfoDuration );
 
 				m_HitInfoArray.RemoveAt(i);
 				break;
@@ -755,6 +770,7 @@ public class Pitch_Main1 : MonoBehaviour {
 		}
 		if( m_bEnablePort ){
 			m_Port.PortName = "COM1";
+			//m_Port.PortName = "COM3";
 			m_Port.BaudRate = 19200;
 			//m_Port.BaudRate = 115200;
 			m_Port.DataBits = 8;
@@ -830,17 +846,20 @@ public class Pitch_Main1 : MonoBehaviour {
 	private const float RAD2DEG = (180.0f / Mathf.PI);
 	private const float DEG2RAD = (Mathf.PI / 180.0f);
 
+	private const float SensorStartTime = 3;
+	//private const float SensorStartTime = 2;
+	private const float PushTime = 1.425f;
 	//private const float PushTime = 1.0f;
 	//private const float PushTime = 0.8f;
-	private const float PushTime = 0.175f;
-	private const float CountDonwTime = 3.0f;
-	private const float StartTime = 5.0f;
+	//private const float PushTime = 0.175f;
+	private const float CountDonwDuration = 3.0f;
+	private const float StartDuration = 5.0f;
 	private const float MainSpeedLife = 3;
 	private const float MainSpeedScale = 1.2f;
-	//private const float HitGroundTime = 2.0f;
-	private const float HitGroundTime = 3.0f;
-	//private const float HitInfoTime = 3.0f;
-	private const float HitInfoTime = 2.5f;
+	//private const float HitGroundDuration = 2.0f;
+	private const float HitGroundDuration = 3.0f;
+	//private const float HitInfoDuration = 3.0f;
+	private const float HitInfoDuration = 2.5f;
 	//private const float HitRecordPosX = 10.0f;
 	private const float HitRecordPosX = 0;
 	//private const float HitRecordPosY = -410.0f;
@@ -874,6 +893,7 @@ public class Pitch_Main1 : MonoBehaviour {
 	private bool m_bPortLog = true;
 	private bool m_bEnablePort = true;
 	//private bool m_bFollow = true;
+	private bool m_bStart = false;
 	private bool m_bPush = false;
 	private bool m_bPhaseLog = true;
 	private int m_nGamePhase;
