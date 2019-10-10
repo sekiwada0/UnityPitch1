@@ -68,6 +68,9 @@ public class Pitch_Main1 : MonoBehaviour {
 		GameObject objBatter = GameObject.FindWithTag("Batter");
 		m_objBatter = objBatter.GetComponent<BatterAnim>();
 
+		GameObject objPitcher = GameObject.FindWithTag("Pitcher");
+		m_objPitcher = objPitcher.GetComponent<PitcherAnim>();
+
 		m_objGage = Instantiate(prefabGage);
 		m_objGage.transform.SetParent(m_objMainCanvas.transform, false);
 		m_objGage.SetActive(false);
@@ -142,10 +145,6 @@ public class Pitch_Main1 : MonoBehaviour {
 		if( m_status != PVAResult.OK )
 			return;
 
-		int nBatterSide = m_PVACtrl.getSysInt("BatterSide");
-		//int nBatterSide = 1;
-		m_objBatter.setBatterSide( nBatterSide );
-
 		if( !m_bPortInit ){
 			Port_Open();
 			Port_DataSend("Y"); /*Motor ON*/
@@ -193,30 +192,42 @@ public class Pitch_Main1 : MonoBehaviour {
 
 		switch( m_nGamePhase ){
 		case GamePhase_Busy:
+			m_objPitcher.setAnim( PitcherAnim.Pitcher_Idle );
 			if( m_nSensorPhase == SensorPhase_Ready ){
 				setGamePhase( GamePhase_Ready );
 				m_objReady.SetActive(true);
 			}
 			break;
 		case GamePhase_Ready:
+			int nBatterSide = m_PVACtrl.getSysInt("BatterSide");
+			//int nBatterSide = 1;
+			m_objBatter.setBatterSide( nBatterSide );
+
 			if( RawKeyInput.IsKeyDown(RawKey.M) ){
 				if( RawKeyInput.IsKeyDown(RawKey.RightControl) || RawKeyInput.IsKeyDown(RawKey.LeftControl) ){
 					setGamePhase( GamePhase_CountDonw );
 					m_objReady.SetActive(false);
 					m_objGage.SetActive(true);
 					m_bPush = false;
-					m_bStart = false;
+					m_bSensorStart = false;
+					m_bPitchMotion = false;
 				}
 			}
 			break;
 		case GamePhase_CountDonw:{
 			m_dTime -= Time.deltaTime;
 
-			if( !m_bStart ){
+			if( !m_bPitchMotion ){
+				if( m_dTime < PitchMotionTime ){
+					m_objPitcher.setAnim( PitcherAnim.Pitcher_Pitch );
+					m_bPitchMotion = true;
+				}
+			}
+			if( !m_bSensorStart ){
 				if( m_dTime < SensorStartTime ){
 					m_PVACtrl.startBall();
 					setSensorPhase( SensorPhase_Start );
-					m_bStart = true;
+					m_bSensorStart = true;
 				}
 			}
 			if( !m_bPush ){
@@ -846,8 +857,11 @@ public class Pitch_Main1 : MonoBehaviour {
 	private const float RAD2DEG = (180.0f / Mathf.PI);
 	private const float DEG2RAD = (Mathf.PI / 180.0f);
 
-	private const float SensorStartTime = 3;
+	private const float PitchMotionTime = 3;
+	//private const float PitchMotionTime = 0.5f;
+	//private const float SensorStartTime = 3;
 	//private const float SensorStartTime = 2;
+	private const float SensorStartTime = 0.5f;
 	private const float PushTime = 1.425f;
 	//private const float PushTime = 1.0f;
 	//private const float PushTime = 0.8f;
@@ -875,8 +889,8 @@ public class Pitch_Main1 : MonoBehaviour {
 	private GameObject m_objInfo2;
 	private GameObject m_objGage = null;
 	private GameObject m_objReady = null;
-	//private GameObject m_objBatter;
 	private BatterAnim m_objBatter;
+	private PitcherAnim m_objPitcher;
 	private HitBall m_lastHit = null;
 	private Camera m_objCamera = null;
 	private SmoothFollow m_smoothFollow = null;
@@ -893,7 +907,8 @@ public class Pitch_Main1 : MonoBehaviour {
 	private bool m_bPortLog = true;
 	private bool m_bEnablePort = true;
 	//private bool m_bFollow = true;
-	private bool m_bStart = false;
+	private bool m_bPitchMotion = false;
+	private bool m_bSensorStart = false;
 	private bool m_bPush = false;
 	private bool m_bPhaseLog = true;
 	private int m_nGamePhase;
