@@ -192,6 +192,7 @@ public class Pitch_Main1 : MonoBehaviour {
 
 		switch( m_nGamePhase ){
 		case GamePhase_Busy:
+			m_objCamera.fieldOfView = 54;
 			m_objPitcher.setAnim( PitcherAnim.Pitcher_Idle );
 			if( m_nSensorPhase == SensorPhase_Ready ){
 				setGamePhase( GamePhase_Ready );
@@ -206,6 +207,8 @@ public class Pitch_Main1 : MonoBehaviour {
 			if( RawKeyInput.IsKeyDown(RawKey.M) ){
 				if( RawKeyInput.IsKeyDown(RawKey.RightControl) || RawKeyInput.IsKeyDown(RawKey.LeftControl) ){
 					setGamePhase( GamePhase_CountDonw );
+					//m_objCamera.fieldOfView = 8;
+					m_objCamera.fieldOfView = 9;
 					m_objReady.SetActive(false);
 					m_objGage.SetActive(true);
 					m_bPush = false;
@@ -407,6 +410,7 @@ public class Pitch_Main1 : MonoBehaviour {
 
 		setGamePhase( GamePhase_Hit );
 		m_objBatter.setAnim( BatterAnim.BatterAnim_Hit );
+		m_objCamera.fieldOfView = 54;
 	}
 	void setSensorPhase(int phase)
 	{
