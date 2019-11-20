@@ -62,7 +62,7 @@ public class Pitch_Main1 : MonoBehaviour {
 		//	Display.displays[2].Activate();
 */
 		m_objMainCanvas = GameObject.FindWithTag("MainCanvas");
-		m_objInfo1 = m_objMainCanvas.transform.Find("Info1").gameObject;
+		//m_objInfo1 = m_objMainCanvas.transform.Find("Info1").gameObject;
 		m_objInfo2 = m_objMainCanvas.transform.Find("Info2").gameObject;
 
 		GameObject objBatter = GameObject.FindWithTag("Batter");
@@ -384,11 +384,11 @@ public class Pitch_Main1 : MonoBehaviour {
 		record.speed = speed * MPS2KPH;
 
 		calcBallAngleInfo( dir, record );
-		setBallSpeedInfo( record.speed );
-		setBallAngleInfo( record );
+		//setBallSpeedInfo( record.speed );
+		//setBallAngleInfo( record );
 		//setLRAngleInfo( dir );
 		//clearLRDistInfo();
-		clearFlyDistInfo(); // clear 飛距離 on new ball
+		//clearFlyDistInfo(); // clear 飛距離 on new ball
 		updateHitRecord();
 
 		GameObject ball = Instantiate(prefabBallHit);
@@ -486,7 +486,7 @@ public class Pitch_Main1 : MonoBehaviour {
 				break;
 			}
 		}
-		setFlyDistInfo( distance );
+		//setFlyDistInfo( distance );
 		//setLRDistInfo( pos.x );
 
 		//if( m_nGamePhase != GamePhase_HitGround && ball == m_lastHit.obj ){
@@ -580,30 +580,30 @@ public class Pitch_Main1 : MonoBehaviour {
 			objSpeedUnit.SetActive(false);
 		}
 
-		GameObject objLaunchAngle = obj.transform.Find("launchAngle").gameObject;
-		Text txLaunchAngle = objLaunchAngle.GetComponent<Text>();
-		txLaunchAngle.text = ((int)record.rotX).ToString();
+		//GameObject objLaunchAngle = obj.transform.Find("launchAngle").gameObject;
+		//Text txLaunchAngle = objLaunchAngle.GetComponent<Text>();
+		//txLaunchAngle.text = ((int)record.rotX).ToString();
 
-		GameObject objAngleUnit1 = obj.transform.Find("angleUnit_1").gameObject;
-		objAngleUnit1.SetActive(true);
+		//GameObject objAngleUnit1 = obj.transform.Find("angleUnit_1").gameObject;
+		//objAngleUnit1.SetActive(true);
 
-		GameObject objSideAngle = obj.transform.Find("sideAngle").gameObject;
-		Text txSideAngle = objSideAngle.GetComponent<Text>();
-		txSideAngle.text = ((int)record.rotY).ToString();
+		//GameObject objSideAngle = obj.transform.Find("sideAngle").gameObject;
+		//Text txSideAngle = objSideAngle.GetComponent<Text>();
+		//txSideAngle.text = ((int)record.rotY).ToString();
 
-		GameObject objAngleUnit2 = obj.transform.Find("angleUnit_2").gameObject;
-		objAngleUnit2.SetActive(true);
+		//GameObject objAngleUnit2 = obj.transform.Find("angleUnit_2").gameObject;
+		//objAngleUnit2.SetActive(true);
 
-		GameObject objR = obj.transform.Find("R").gameObject;
-		GameObject objL = obj.transform.Find("L").gameObject;
-		objL.SetActive(false);
-		objR.SetActive(false);
-		if( record.rotY > 0 ){
-			objR.SetActive(true);
-		}
-		else if( record.rotY < 0 ){
-			objL.SetActive(true);
-		}
+		//GameObject objR = obj.transform.Find("R").gameObject;
+		//GameObject objL = obj.transform.Find("L").gameObject;
+		//objL.SetActive(false);
+		//objR.SetActive(false);
+		//if( record.rotY > 0 ){
+		//	objR.SetActive(true);
+		//}
+		//else if( record.rotY < 0 ){
+		//	objL.SetActive(true);
+		//}
 
 		setHitDistance_(record.distance, obj);
 	}
@@ -689,23 +689,23 @@ public class Pitch_Main1 : MonoBehaviour {
 			tx.text= info.distance.ToString("f1");
 		}
 	}
-	void setFlyDistInfo(float distance){ setDistanceInfo1("FlyDistInfo", distance); }
-	void setLRDistInfo(float distance){
-		string prefix = null; // added null and else if to avoid R0.0m
-		if (distance < 0)
-		{
-			distance = -distance;
-			prefix = "L";
-		}
-		else if (distance > 0)
-		{
-			prefix = "R";
-		}
-		setDistanceInfo2("LRDistValue", prefix, distance);
-	}
+	//void setFlyDistInfo(float distance){ setDistanceInfo1("FlyDistInfo", distance); }
+	//void setLRDistInfo(float distance){
+	//	string prefix = null; // added null and else if to avoid R0.0m
+	//	if (distance < 0)
+	//	{
+	//		distance = -distance;
+	//		prefix = "L";
+	//	}
+	//	else if (distance > 0)
+	//	{
+	//		prefix = "R";
+	//	}
+	//	setDistanceInfo2("LRDistValue", prefix, distance);
+	//}
 	//void clearLRDistInfo(){ clearInfo("LRDistValue"); }
-	void clearFlyDistInfo(){ clearInfo("FlyDistInfo"); } // clear 飛距離 on new ball
-	void setBallSpeedInfo(float speed){ setSpeedInfo("BallSpeedValue", speed); }
+	//void clearFlyDistInfo(){ clearInfo("FlyDistInfo"); } // clear 飛距離 on new ball
+	//void setBallSpeedInfo(float speed){ setSpeedInfo("BallSpeedValue", speed); }
 	void calcBallAngleInfo(Vector3 dir,HitRecord record){
 		float rotY = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
 		Vector3 vec = Quaternion.Euler( 0, -rotY, 0 ) * dir;
@@ -715,7 +715,7 @@ public class Pitch_Main1 : MonoBehaviour {
 		record.rotX = rotX;
 		record.rotY = rotY;
 	}
-	void setBallAngleInfo(HitRecord record){
+	/*void setBallAngleInfo(HitRecord record){
 		setAngleInfo("LaunchAngleValue", null, record.rotX);
 
 		string prefix = null;
@@ -760,16 +760,7 @@ public class Pitch_Main1 : MonoBehaviour {
 		GameObject objText = objInfo.transform.Find("text").gameObject;
 		Text tx = objText.GetComponent<Text>();
 		tx.text = prefix + angle.ToString("f1") + "°";
-	}
-	GameObject addSysInfo(string name){
-		name += "Info";
-		GameObject obj = m_objMainCanvas.transform.Find(name).gameObject;
-		GameObject objValue = obj.transform.Find("value").gameObject;
-		return objValue;
-	}
-	void setSysInfo(GameObject obj,string value){
-		obj.GetComponent<Text>().text = value;
-	}
+	}*/
 	void resetView(){
 		//transform.localPosition = new Vector3(0, 1.35f, 0);
 		transform.position = new Vector3(0, 1.35f, -3.5f);
@@ -881,7 +872,8 @@ public class Pitch_Main1 : MonoBehaviour {
 	//private const float HitRecordPosX = 10.0f;
 	private const float HitRecordPosX = 0;
 	//private const float HitRecordPosY = -410.0f;
-	private const float HitRecordPosY = -145;
+	//private const float HitRecordPosY = -145;
+	private const float HitRecordPosY = -51;
 	//private const float HitRecordHeight = 36.0f;
 	//private const float HitRecordHeight = 24.0f;
 	private const float HitRecordHeight = 48.0f;
@@ -889,7 +881,7 @@ public class Pitch_Main1 : MonoBehaviour {
 
 	private DetectNotify m_detect = new DetectNotify();
 	private GameObject m_objMainCanvas;
-	private GameObject m_objInfo1;
+	//private GameObject m_objInfo1;
 	private GameObject m_objInfo2;
 	private GameObject m_objGage = null;
 	private GameObject m_objReady = null;
