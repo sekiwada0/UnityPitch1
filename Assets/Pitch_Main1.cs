@@ -13,10 +13,9 @@ using UnityRawInput;
 public class HitRecord {
 	public GameObject ball;
 	public int nNo;
-	public float speed;
-	public float distance;
-	public float rotX;
-	public float rotY;
+	public int result;
+	public float speed, distance;
+	public float strikePosX, strikePosY;
 };
 
 public class HitBall {
@@ -64,6 +63,7 @@ public class Pitch_Main1 : MonoBehaviour {
 		m_objMainCanvas = GameObject.FindWithTag("MainCanvas");
 		//m_objInfo1 = m_objMainCanvas.transform.Find("Info1").gameObject;
 		m_objInfo2 = m_objMainCanvas.transform.Find("Info2").gameObject;
+		m_objInfo3 = m_objMainCanvas.transform.Find("Info3").gameObject;
 
 		GameObject objBatter = GameObject.FindWithTag("Batter");
 		m_objBatter = objBatter.GetComponent<BatterAnim>();
@@ -80,6 +80,7 @@ public class Pitch_Main1 : MonoBehaviour {
 		m_objReady.SetActive(false);
 
 		initHitRecord();
+		initStrikeMark();
 
 		m_objCamera = GetComponent<Camera>();
 		m_smoothFollow = GetComponent<SmoothFollow>();
@@ -166,6 +167,13 @@ public class Pitch_Main1 : MonoBehaviour {
 				m_PVACtrl.endBall();
 				setSensorPhase(SensorPhase_Busy);
 
+				HitRecord record = addHitRecord();
+				record.strikePosX = m_detect.strike_pos.x;
+				record.strikePosY = m_detect.strike_pos.y;
+
+				m_StrikeZoneSize.x = m_PVACtrl.getSysFloat("StrikeZoneWidth");
+				m_StrikeZoneSize.y = m_PVACtrl.getSysFloat("StrikeZoneHeight");
+
 				IntPtr pData;
 				if( (m_detect.flags & (int)PVAFlg.Hit) != 0 ){
 					pData = m_detect.hit_path.data;
@@ -174,18 +182,45 @@ public class Pitch_Main1 : MonoBehaviour {
 					pData = new IntPtr(pData.ToInt64() + Marshal.SizeOf(typeof(PVADetectData)));
 					PVADetectData last = (PVADetectData)Marshal.PtrToStructure(pData, typeof(PVADetectData));
 
-					startHit( first, last );
+					uint send_time = last.time - first.time;
+					float t = (float)1000 / (float)send_time;
+
+					Vector3 dir = new Vector3();
+					dir.x = last.pos.x - first.pos.x;
+					dir.y = last.pos.y - first.pos.y;
+					dir.z = last.pos.z - first.pos.z;
+					float speed = dir.magnitude * t;
+					dir.Normalize();
+					dir.z = -dir.z;
+
+					Vector3 pos = new Vector3(first.pos.x, first.pos.y, -first.pos.z);
+
+					record.result = Result_Hit;
+					record.speed = speed * MPS2KPH;
+					record.ball = startHit( pos, dir, speed );
 				}
+				else{
+					float half_width = m_StrikeZoneSize.x * 0.5f;
+					float half_height = m_StrikeZoneSize.y * 0.5f;
+					if( record.strikePosX >= -half_width && record.strikePosX <= half_width &&
+						record.strikePosY >= -half_height && record.strikePosY <= half_height )
+					{
+						record.result = Result_Strike;
+					}
+					else{
+						record.result = Result_Ball;
+					}
+				}
+				updateStrikeMark();
+				updateHitRecord();
 			}
 			else{
-				if( Input.GetMouseButtonDown(0) ){
+				/*if( Input.GetMouseButtonDown(0) ){
 					m_PVACtrl.endBall();
 					setSensorPhase(SensorPhase_Busy);
 
-					//GigaTrax.Debug.Log("mousePosition: " + Input.mousePosition);
-					//resetView();
 					startHit2();
-				}
+				}*/
 			}
 			break;}
 		}
@@ -346,62 +381,20 @@ public class Pitch_Main1 : MonoBehaviour {
 			m_smoothFollow.update();
 		}
 	}*/
-	void startHit(PVADetectData first,PVADetectData last)
+	GameObject startHit(Vector3 pos,Vector3 dir,float speed)
 	{
 		if( m_bPhaseLog )
 			GigaTrax.Debug.Log( "startHit" );
-		m_pos0 = first.pos;
-		m_pos1 = last.pos;
-
-		uint send_time = last.time - first.time;
-		float t = (float)1000 / (float)send_time;
-
-		Vector3 dir = new Vector3();
-		dir.x = m_pos1.x - m_pos0.x;
-		dir.y = m_pos1.y - m_pos0.y;
-		dir.z = m_pos1.z - m_pos0.z;
-		float speed = dir.magnitude * t;
-		dir.Normalize();
-		dir.z = -dir.z;
-		startHit_( new Vector3(m_pos0.x, m_pos0.y, -m_pos0.z), dir, speed );
-	}
-	void startHit2()
-	{
-		if( m_bPhaseLog )
-			GigaTrax.Debug.Log( "startHit2" );
-		//int ispeed = 120;
-		int ispeed = UnityEngine.Random.Range( 8, 13 ) * 10;
-		float speed = (float)ispeed * KPH2MPS;
-
-		Ray ray = m_objCamera.ScreenPointToRay( Input.mousePosition );
-		Vector3 dir = ray.direction;
-		Vector3 pos = ray.origin;
-		startHit_( pos, dir, speed );
-	}
-	void startHit_(Vector3 pos,Vector3 dir,float speed)
-	{
-		HitRecord record = addHitRecord();
-		record.speed = speed * MPS2KPH;
-
-		calcBallAngleInfo( dir, record );
-		//setBallSpeedInfo( record.speed );
-		//setBallAngleInfo( record );
-		//setLRAngleInfo( dir );
-		//clearLRDistInfo();
-		//clearFlyDistInfo(); // clear 飛距離 on new ball
-		updateHitRecord();
 
 		GameObject ball = Instantiate(prefabBallHit);
 		BallHit ball_hit = ball.GetComponent<BallHit>();
-		//ball_hit.setRecord( record );
-		record.ball = ball;
 
 		ball.transform.localPosition = pos;
 
 		Rigidbody rb = ball.GetComponent<Rigidbody>();
 		rb.velocity = dir * speed;
 
-		addHitInfo( ball, record.speed );
+		addHitInfo( ball, speed * MPS2KPH );
 
 		if( m_smoothFollow ){
 			m_smoothFollow.setTarget( ball );
@@ -411,6 +404,8 @@ public class Pitch_Main1 : MonoBehaviour {
 		setGamePhase( GamePhase_Hit );
 		m_objBatter.setAnim( BatterAnim.BatterAnim_Hit );
 		m_objCamera.fieldOfView = 54;
+
+		return ball;
 	}
 	void setSensorPhase(int phase)
 	{
@@ -524,6 +519,53 @@ public class Pitch_Main1 : MonoBehaviour {
 		Destroy( ballEffect, 1.0f );
 	}
 
+	void clear(){
+		/*m_RecordArrayをクリア*/
+		/*m_objHitRecordをクリア*/
+		/*TopViewをクリア*/
+		/*SideViewをクリア*/
+		for(int i = 0; i < NumHitRecord; i++){
+			GameObject obj = m_objStrikeMark[i];
+			obj.SetActive(false);
+		}
+	}
+/*StrikeMark*/
+	void initStrikeMark(){
+		GameObject objImage = m_objInfo3.transform.Find("image").gameObject;
+
+		m_objStrikeMark = new GameObject[NumHitRecord];
+
+		for(int i = 0; i < NumHitRecord; i++){
+			GameObject obj = Instantiate(prefabStrikeMark);
+			obj.transform.SetParent(objImage.transform, false);
+			obj.SetActive(false);
+
+			m_objStrikeMark[i] = obj;
+		}
+	}
+	void updateStrikeMark(){
+		float fStrikeZonePixel = 210.0f;
+		float scale = 0;
+		if( m_StrikeZoneSize.x != 0 )
+			scale = fStrikeZonePixel / m_StrikeZoneSize.x;
+
+		int num = m_RecordArray.Count;
+		int end = num-1;
+		if( num > NumHitRecord )
+			num = NumHitRecord;
+		for(int i = 0; i < num; i++){
+			HitRecord record = m_RecordArray[end-i];
+			GameObject obj = m_objStrikeMark[i];
+
+			GameObject objNo = obj.transform.Find("text").gameObject;
+			Text txNo = objNo.GetComponent<Text>();
+			txNo.text = record.nNo.ToString();
+
+			obj.transform.localPosition = new Vector3(record.strikePosX * scale, record.strikePosY * scale, 0);
+			obj.SetActive(true);
+		}
+	}
+/*HitRecord*/
 	void initHitRecord(){
 		m_objHitRecord = new GameObject[NumHitRecord];
 
@@ -543,7 +585,31 @@ public class Pitch_Main1 : MonoBehaviour {
 		if( num > NumHitRecord )
 			num = NumHitRecord;
 		for(int i = 0; i < num; i++){
-			setHitRecord_(m_RecordArray[end-i], m_objHitRecord[i]);
+			HitRecord record = m_RecordArray[end-i];
+			GameObject obj = m_objHitRecord[i];
+
+			GameObject objNo = obj.transform.Find("no").gameObject;
+			Text txNo = objNo.GetComponent<Text>();
+			txNo.text = record.nNo.ToString();
+
+			GameObject objSpeed = obj.transform.Find("speed").gameObject;
+			Text txSpeed = objSpeed.GetComponent<Text>();
+			string speed_text = "";
+			if( record.result == Result_Hit ){
+				if( record.speed >= 0 ){
+					//speed_text = record.speed.ToString("f2") + " Km/h";
+					speed_text = (int)record.speed + " km/h";
+				}
+			}
+			else if( record.result == Result_Strike ){
+				speed_text = "STRIKE";
+			}
+			else if( record.result == Result_Ball ){
+				speed_text = "BALL";
+			}
+			txSpeed.text = speed_text;
+
+			setHitDistance_(record.distance, obj);
 		}
 	}
 	HitRecord addHitRecord(){
@@ -552,6 +618,7 @@ public class Pitch_Main1 : MonoBehaviour {
 		int size = m_RecordArray.Count;
 		record.ball = null;
 		record.nNo = size + 1;
+		record.result = Result_None;
 		record.speed = -1;
 		record.distance = -1;
 
@@ -562,66 +629,6 @@ public class Pitch_Main1 : MonoBehaviour {
 		HitBall hit = new HitBall(obj);
 		m_HitArray.Add( hit );
 		return hit;
-	}
-	void setNewHitRecord_(HitRecord record,GameObject obj){
-		GameObject objNo = obj.transform.Find("no").gameObject;
-		Text txNo = objNo.GetComponent<Text>();
-		txNo.text = record.nNo.ToString();
-
-		GameObject objSpeed = obj.transform.Find("speed").gameObject;
-		Text txSpeed = objSpeed.GetComponent<Text>();
-		GameObject objSpeedUnit = obj.transform.Find("speedUnit").gameObject;
-		if( record.speed >= 0 ){
-			txSpeed.text = ((int)record.speed).ToString();
-			objSpeedUnit.SetActive(true);
-		}
-		else{
-			txSpeed.text = "";
-			objSpeedUnit.SetActive(false);
-		}
-
-		//GameObject objLaunchAngle = obj.transform.Find("launchAngle").gameObject;
-		//Text txLaunchAngle = objLaunchAngle.GetComponent<Text>();
-		//txLaunchAngle.text = ((int)record.rotX).ToString();
-
-		//GameObject objAngleUnit1 = obj.transform.Find("angleUnit_1").gameObject;
-		//objAngleUnit1.SetActive(true);
-
-		//GameObject objSideAngle = obj.transform.Find("sideAngle").gameObject;
-		//Text txSideAngle = objSideAngle.GetComponent<Text>();
-		//txSideAngle.text = ((int)record.rotY).ToString();
-
-		//GameObject objAngleUnit2 = obj.transform.Find("angleUnit_2").gameObject;
-		//objAngleUnit2.SetActive(true);
-
-		//GameObject objR = obj.transform.Find("R").gameObject;
-		//GameObject objL = obj.transform.Find("L").gameObject;
-		//objL.SetActive(false);
-		//objR.SetActive(false);
-		//if( record.rotY > 0 ){
-		//	objR.SetActive(true);
-		//}
-		//else if( record.rotY < 0 ){
-		//	objL.SetActive(true);
-		//}
-
-		setHitDistance_(record.distance, obj);
-	}
-	void setHitRecord_(HitRecord record,GameObject obj){
-		GameObject objNo = obj.transform.Find("no").gameObject;
-		Text txNo = objNo.GetComponent<Text>();
-		txNo.text = record.nNo.ToString();
-
-		GameObject objSpeed = obj.transform.Find("speed").gameObject;
-		Text txSpeed = objSpeed.GetComponent<Text>();
-		if( record.speed >= 0 ){
-			//txSpeed.text = record.speed.ToString("f2") + " Km/h";
-			txSpeed.text = (int)record.speed + " km/h";
-		}
-		else{
-			txSpeed.text = "";
-		}
-		setHitDistance_(record.distance, obj);
 	}
 	void setHitDistance_(float distance,GameObject obj){
 		GameObject objDist = obj.transform.Find("distance").gameObject;
@@ -689,23 +696,23 @@ public class Pitch_Main1 : MonoBehaviour {
 			tx.text= info.distance.ToString("f1");
 		}
 	}
-	//void setFlyDistInfo(float distance){ setDistanceInfo1("FlyDistInfo", distance); }
-	//void setLRDistInfo(float distance){
-	//	string prefix = null; // added null and else if to avoid R0.0m
-	//	if (distance < 0)
-	//	{
-	//		distance = -distance;
-	//		prefix = "L";
-	//	}
-	//	else if (distance > 0)
-	//	{
-	//		prefix = "R";
-	//	}
-	//	setDistanceInfo2("LRDistValue", prefix, distance);
-	//}
-	//void clearLRDistInfo(){ clearInfo("LRDistValue"); }
-	//void clearFlyDistInfo(){ clearInfo("FlyDistInfo"); } // clear 飛距離 on new ball
-	//void setBallSpeedInfo(float speed){ setSpeedInfo("BallSpeedValue", speed); }
+	/*void setFlyDistInfo(float distance){ setDistanceInfo1("FlyDistInfo", distance); }
+	void setLRDistInfo(float distance){
+		string prefix = null; // added null and else if to avoid R0.0m
+		if (distance < 0)
+		{
+			distance = -distance;
+			prefix = "L";
+		}
+		else if (distance > 0)
+		{
+			prefix = "R";
+		}
+		setDistanceInfo2("LRDistValue", prefix, distance);
+	}
+	void clearLRDistInfo(){ clearInfo("LRDistValue"); }
+	void clearFlyDistInfo(){ clearInfo("FlyDistInfo"); } // clear 飛距離 on new ball
+	void setBallSpeedInfo(float speed){ setSpeedInfo("BallSpeedValue", speed); }
 	void calcBallAngleInfo(Vector3 dir,HitRecord record){
 		float rotY = Mathf.Atan2(dir.x, dir.z) * Mathf.Rad2Deg;
 		Vector3 vec = Quaternion.Euler( 0, -rotY, 0 ) * dir;
@@ -715,7 +722,7 @@ public class Pitch_Main1 : MonoBehaviour {
 		record.rotX = rotX;
 		record.rotY = rotY;
 	}
-	/*void setBallAngleInfo(HitRecord record){
+	void setBallAngleInfo(HitRecord record){
 		setAngleInfo("LaunchAngleValue", null, record.rotX);
 
 		string prefix = null;
@@ -828,8 +835,10 @@ public class Pitch_Main1 : MonoBehaviour {
 	public GameObject prefabDistanceSilver;
 	public GameObject prefabDistanceGold;
 	public GameObject prefabReady;
+	public GameObject prefabStrikeMark;
 
 	private GameObject[] m_objHitRecord;
+	private GameObject[] m_objStrikeMark;
 
 	private const int GamePhase_Busy        = 1;
 	private const int GamePhase_Ready       = 2;
@@ -845,6 +854,11 @@ public class Pitch_Main1 : MonoBehaviour {
 	private SerialPort m_Port;
 
 	private const int NumHitRecord = 10;
+
+	private const int Result_None = 0;
+	private const int Result_Strike = 1;
+	private const int Result_Ball = 2;
+	private const int Result_Hit = 3;
 
 	private const float KPH2MPS = (1000.0f / 3600.0f);
 	private const float MPS2KPH = (3600.0f / 1000.0f);
@@ -883,6 +897,7 @@ public class Pitch_Main1 : MonoBehaviour {
 	private GameObject m_objMainCanvas;
 	//private GameObject m_objInfo1;
 	private GameObject m_objInfo2;
+	private GameObject m_objInfo3;
 	private GameObject m_objGage = null;
 	private GameObject m_objReady = null;
 	private BatterAnim m_objBatter;
@@ -893,7 +908,6 @@ public class Pitch_Main1 : MonoBehaviour {
 	private TrailView m_topView = null;
 	private TrailView m_sideView = null;
 
-	private PVAVector3D m_pos0, m_pos1;
 	private List<Vector3> m_posArray = new List<Vector3>();
 	private List<HitRecord> m_RecordArray = new List<HitRecord>();
 	private List<HitBall> m_HitArray = new List<HitBall>();
@@ -911,5 +925,6 @@ public class Pitch_Main1 : MonoBehaviour {
 	private int m_nSensorPhase;
 	private PVAResult m_status = PVAResult.Uninitialize;
 	private float m_dTime = 0;
+	private PVAVector2D m_StrikeZoneSize;
 	//private float m_posSysInfo = 0;
 }

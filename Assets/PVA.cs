@@ -36,6 +36,8 @@ namespace GigaTrax.PVA
 		public float speed;
 		public float azimuth;
 		public float altitude;
+		/* 19/11/16 added */
+		public PVAVector2D strike_pos;
 	};
 
 	public enum PVAResult {
@@ -76,17 +78,23 @@ namespace GigaTrax.PVA
 		[DllImport("PVA")]
 		private static extern int PVA_getDetect(ref DetectNotify detect);
 
+		[DllImport("PVA")]
+		private static extern int PVA_startBall();
+
+		[DllImport("PVA")]
+		private static extern int PVA_endBall();
+
 		[DllImport("PVA", CharSet = CharSet.Ansi)]
 		private static extern int PVA_getSysInt(string name);
 
 		[DllImport("PVA", CharSet = CharSet.Ansi)]
 		private static extern int PVA_setSysInt(string name,int value);
 
-		[DllImport("PVA")]
-		private static extern int PVA_startBall();
+		[DllImport("PVA", CharSet = CharSet.Ansi)]
+		private static extern float PVA_getSysFloat(string name);
 
-		[DllImport("PVA")]
-		private static extern int PVA_endBall();
+		[DllImport("PVA", CharSet = CharSet.Ansi)]
+		private static extern int PVA_setSysFloat(string name,float value);
 
 		public void init(){
 			if( m_bPVA == false ){
@@ -100,12 +108,9 @@ namespace GigaTrax.PVA
 				m_bPVA = false;
 			}
 		}
-		public PVAResult getCamraStatus(){
-			return (PVAResult)PVA_getCamraStatus();
-		}
-		public int getSysInt(string name){
-			return PVA_getSysInt( name );
-		}
+		public PVAResult getCamraStatus(){ return (PVAResult)PVA_getCamraStatus(); }
+		public int getSysInt(string name){ return PVA_getSysInt( name ); }
+		public float getSysFloat(string name){ return PVA_getSysFloat( name ); }
 		public PVAResult getDetect(ref DetectNotify detect){
 			return (PVAResult)PVA_getDetect( ref detect );
 		}
