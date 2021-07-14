@@ -1,0 +1,11 @@
+# LightWave ExportObj(sekiwada)
+
+newmtl court
+Ns 40
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+Ni 1
+d 0
+illum 1
+map_Kd court.png

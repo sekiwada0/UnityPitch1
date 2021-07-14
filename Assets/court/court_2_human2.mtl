@@ -1,0 +1,11 @@
+# LightWave ExportObj(sekiwada)
+
+newmtl fans5
+Ns 40
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ni 1
+d 0
+illum 1
+map_Kd fans5.png

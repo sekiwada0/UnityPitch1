@@ -1,0 +1,11 @@
+# LightWave ExportObj(sekiwada)
+
+newmtl sky12
+Ns 40
+Ka 1  
+Kd 1 1 1
+Ks 0  
+Ni 1
+d 0
+illum 1
+map_Kd sky12.png

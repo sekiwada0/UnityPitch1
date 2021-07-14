@@ -1,0 +1,12 @@
+# LightWave ExportObj(sekiwada)
+mtllib bg_tree_0.mtl
+v -40 0 -0
+v -40 10 -0
+v 40 -0 -0
+v 40 10 -0
+vt 2.5 1
+vt 2.5 0
+vt -1.5 0
+vt -1.5 1
+usemtl bg_trees
+f 2/4 1/3 3/2 4/1

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<params>
+  <system>
+    <PitchingMachine>3Wheel2008</PitchingMachine>
+    <!-- ko:Korean, en:English, ja:Japanese -->
+    <Language>ja</Language>
+    <OPMovie>BevelStart.mp4</OPMovie>
+    <EDMovie>BevelEnd.mp4</EDMovie>
+  </system>
+  <PitchingMachine name="3Wheel2008">
+    <CtrlPort>com5</CtrlPort>
+    <WheelPort>com6</WheelPort>
+    <!-- 発射トリガを受信してから 実際に発射するまでの時間(秒) -->
+    <Interval>1</Interval>
+  </PitchingMachine>
+</params>

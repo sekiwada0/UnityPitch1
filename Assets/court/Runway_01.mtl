@@ -1,0 +1,22 @@
+# LightWave ExportObj(sekiwada)
+
+newmtl Runway_01
+Ns 40
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+Ni 1
+d 0
+illum 1
+map_Kd Runway_01_Color.png
+map_Bump Runway_01_Bump.png
+
+newmtl Runway_01_front
+Ns 40
+Ka 0 0 0
+Kd 0.933333 1 0.568627
+Ks 0 0 0
+Ni 1
+d 0
+illum 1
+map_Kd board_01.png

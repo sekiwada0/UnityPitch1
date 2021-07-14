@@ -1,0 +1,71 @@
+# LightWave ExportObj(sekiwada)
+
+newmtl bg01
+Ns 18
+Ka 1 1 1
+Kd 0.588 0.588 0.588
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd bg01.jpg
+
+newmtl bg02
+Ns 18
+Ka 1 1 1
+Kd 0.588 0.588 0.588
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd bg02.jpg
+
+newmtl bg03
+Ns 18
+Ka 1 1 1
+Kd 0.588 0.588 0.588
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd bg03.jpg
+
+newmtl bg05
+Ns 18
+Ka 1 1 1
+Kd 0.588 0.588 0.588
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd bg05.jpg
+
+newmtl bg06
+Ns 18
+Ka 1 1 1
+Kd 0.588 0.588 0.588
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd bg06.jpg
+
+newmtl bg07
+Ns 18
+Ka 1 1 1
+Kd 0.588 0.588 0.588
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd bg07.jpg
+
+newmtl bg09
+Ns 18
+Ka 1 1 1
+Kd 0.588 0.588 0.588
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd bg09.jpg

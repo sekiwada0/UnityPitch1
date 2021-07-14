@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<params>
+  <system>
+    <PitchingMachine>Lee1701</PitchingMachine>    <!-- Lee1701, 3Wheel1912 -->
+    <Language>ja</Language>    <!-- ko:Korean, en:English, ja:Japanese -->
+    <SpeedUnit>Mile</SpeedUnit>    <!-- Mile:mile/h, Km:km/h -->
+    <GameLimit>Time</GameLimit>    <!-- Time, Ball, Signal -->
+    <!--GameLimit>Ball</GameLimit-->    <!-- Time, Ball, Signal -->
+    <TimeLimit>300</TimeLimit>     <!-- sec -->
+    <CountDown>30</CountDown>      <!-- カウントダウン表示に切り替わる残り時間 -->
+    <BallLimit>20</BallLimit>
+    <RestBlink>3</RestBlink>       <!-- Restを点滅する時間 -->
+    <!--RestBlink>5</RestBlink-->       <!-- Restを点滅する時間 -->
+    <OPMovie>CDIStart.mp4</OPMovie>
+    <EDMovie>CDIEnd.mp4</EDMovie>
+  </system>
+  <PVA>
+    <StartDelay>2.0</StartDelay>
+  </PVA>
+  <PitchingMachine name="Lee1701">
+    <Baudrate>19200</Baudrate>
+    <Port>com3</Port>
+    <!-- portへのデータ送信間隔(msec) -->
+    <PortInterval>50</PortInterval>
+    <!--PortInterval>10</PortInterval-->
+    <MotorON>Y</MotorON>
+    <MotorOFF>T</MotorOFF>
+    <Push>G</Push>
+    <Speed>SU23SD27</Speed>
+    <CountDown>3</CountDown> <!-- カウントダウン時間(秒) -->
+    <PushTime>1.425</PushTime> <!-- Pushコマンドを出してから 実際に発射するまでの時間(秒) -->
+  </PitchingMachine>
+  <PitchingMachine name="3Wheel1912">
+    <Baudrate>9600</Baudrate>
+    <Port>com1</Port>
+    <CmdA>sxaeszae</CmdA>
+    <CmdB>sxbeszbe</CmdB>
+    <CmdC>sxceszce</CmdC>
+    <!-- 発射トリガを受信してから 実際に発射するまでの時間(秒) -->
+    <Interval>1.8</Interval>
+  </PitchingMachine>
+</params>

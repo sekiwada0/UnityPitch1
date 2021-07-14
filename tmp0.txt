@@ -1,0 +1,274 @@
+
+================================================================
+■ボレーメニュー <20/11/08>
+Bounce
+・ボレー
+  Volley
+
+・ストローク: ボールをワンバウンドさせて打つプレー
+  Stroke
+  -> メニュー用の画像を探す
+
+	public void OnStroke()
+	{
+		//Debug.Log("Stroke selected");
+		MainFrame.setSysInt(strBounce, Bounce.Stroke);
+	}
+	public void OnVolley()
+	{
+		//Debug.Log("Volley selected");
+		MainFrame.setSysInt(strBounce, Bounce.Volley);
+	}
+
+・ボレーとストローク用の画像作成
+  -> OK
+
+・メニュー実装
+  -> OK
+
+・xmlにボレー用 / ストローク用データを用意
+  -> OK
+
+・Gameに反映
+  -> OK
+
+・動作確認
+  xmlから数値が読めてるか 確認
+  -> OK
+
+・カメラアングルを 従来に戻す
+  -> ネットが消えるはずが 消えなくなった
+
+dizzy_distort_views
+
+dizz_view3
+
+13.66
+-1.96
+step = 
+1.735555555555556
+15.62
+
+angle_step
+9.132625
+
+26.07162
+16.939
+
+================================================================
+■TODO
+右の方がカメラの絞りによって ちょっと暗くなっており
+影の影響が やや抑えされています
+
+1920 : 1200
+16 : 10
+
+・Insert Coinのトリガを テニスアプリと同じにしてみる
+  -> HOMEキー または Touchカード (?)
+
+・デモをずっと流していると ネットの上にボールが留まってしまう事がある
+  => 発射した時点で Destroy設定した方が良いかも(?)
+  => またはNetに接触した時点で Destroy設定する(?)
+
+---------------------------------------------------------------------------------
+a. スクリーンテニス用カメラシステムプログラムを開発し、
+  プレーするうえで違和感なく感知して実現する。
+
+b. 練習機能の具現化で、ピッチングマシンと連動して、
+・フォアハンド、ミドルハンド、バックハンドの3つ（ストローク·ボレー）
+・サーブ練習
+  => スマッシュ機能の2つで構成する
+
+c. コイン投入を感知してプログラムを開始可能にする。
+
+d. 結果画面にボールスピードとコートIN,OUT結果の確率を表示する。
+
+e. 画面に表示されるボールの軌跡をホークアイ（ズームインカメラアングル）機能を表現する。
+
+-以上-
+
+外機能追加は別途協議する。
+
+http://dev.spocube.net/wp/wp-admin/index.php
+http://spocube.net/wp/wp-admin/index.php
+ID: ams-manager
+PASS: XsRlxZec5QrXFXSv%X4p%f03
+
+8516683BB2BECA04B5940036F608C160
+
+wada-PC D0810D7F66C29CB608EF272774DBD8CE
+
+・menu 確認
+・coint 投入
+
+・MOVELR / MOVETBの最小,最大値
+
+[FAST80]
+[FAST90]
+[FAST100]
+
+[SLIDER80]
+[SLIDER90]
+[SLIDER100]
+
+[CURVE80]
+[CURVE90]
+[CURVE100]
+
+・Pitch認識処理でバウンド処理を hitから除外する
+
+・Result画面 実装
+  同じGameSceneで良いかも(?)
+  => カメラ初期位置
+   pos 0 0.27 -13.2
+   rot -16.23 0 0
+  => カメラ回転
+   rot.yを徐々に変更
+  => Result画面 Active
+  => パーティクル発生
+  => 全体にsmokeかけても良いかも(?)
+
+================================================================
+■シーン調整
+・フェンス外の草
+
+・近い木を増やす
+
+・中景の木
+  ビルボード
+
+・草がちょっと黄色ぽい
+
+・ビル位置調整
+  山側を避ける
+
+https://free4pc.org/adobe-after-effects-2020-pre-activated/
+F:\seki\etc\GigaTrax\Objects\CamperTrucker\Texture2D\Grass.png
+F:\seki\etc\GigaTrax\Objects\CamperTrucker\fbx\Camper_Props\Grass.png
+
+6.09 x 5.37
+
+================================================================
+■Game構成について
+・サーブ機能について
+  PVATで実装する必要がある(?)
+  PVAのオプションで PVAT的な動作をさせれないだろうか..
+  -> PVATの Trigger=0 モード
+    -> NeedPitch=1: 従来
+    -> NeedPitch=0: pitchが無くても hitだけで検出
+  start / endが無い(?)
+  -> deleteProcが正しく動作するかどうか
+  中身は後で作る
+
+・メニュー
+  サーブの時のモータ値は?
+  => 適当に決めておく
+
+・メニュー
+  ボレーは メニューのどこに置くか
+  => 未定
+
+・メニュー
+  プロジェクタとタッチパネルを分離
+  => 後で
+
+================================================================
+■Menu調査
+・UI
+メニュー処理を渥美さんから受け取っており
+それの組み込みが必要です
+
+First of all, thanks for purchasing the package!
+There are a couple things you need to know before
+using the package.
+
+まず、パッケージを購入していただきありがとうございます。
+以前に知っておくべきことがいくつかあります
+パッケージを使用します。
+
+ This package requires Unity 2018.1 at the moment. It
+might be working on older versions as well, however, I'd
+not suggest to use it below 2018
+現在、このパッケージにはUnity 2018.1が必要です。それ
+古いバージョンでも動作している可能性がありますが、私は
+2018年以下での使用はお勧めしません
+
+You don't need any 3rd plugin. It all uses the default
+Unity components
+3番目のプラグインは必要ありません。すべてデフォルトを使用します
+Unityコンポーネント
+
+ Zone UI works with dekstop, console, mobile and
+gamepad inputs
+Zone UIはdekstop、コンソール、モバイル、および
+ゲームパッド入力
+
+This project specially made for Linear lighting mode.
+You can use with gamma as well, but alpha of the image
+could be a little bit different.
+このプロジェクトは、線形照明モード用に特別に作成されました。
+ガンマでも使用できますが、画像のアルファ
+少し異なる場合があります。
+
+Zone UI is supporting all kind of horizontal aspects.
+You can change the aspect ratio and it'll fit your screen
+automatically.
+
+ゾーンUIは、あらゆる種類の水平方向のアスペクトをサポートしています。
+アスペクト比を変更すると、画面にフィットします
+自動的に。
+
+In order to use some gamepad inputs and UI particle
+feature, you have to tweak some project settings. 
+一部のゲームパッド入力とUIパーティクルを使用するには
+機能、いくつかのプロジェクト設定を微調整する必要があります。
+(Check page 3 and 8)
+
+There are 4 demo scenes in the project. You can select
+one of them, and start to work with it. Cross Platform
+scene supports both keyboard and gamepad inputs
+プロジェクトには4つのデモシーンがあります。選択できます
+それらの1つ、そしてそれで作業を開始します。クロスプラットフォーム
+シーンはキーボードとゲームパッドの両方の入力をサポートしています
+
+If you experience strange results like the image down
+below, don't worry, it's just a Unity bug. Disable and
+enable Canvas object to fix this problem.
+
+画像ダウンのような奇妙な結果が発生した場合
+以下、心配しないでください、それはただのUnityのバグです。無効にし、
+Canvasオブジェクトがこの問題を修正できるようにします。
+
+There's also UI particle feature in the demo scenes.
+If you want to use this feature, you have to add UI Particle Additive shader to this area:
+Graphics > Always Included Shaders
+デモシーンにはUIパーティクル機能もあります。
+この機能を使用する場合は、この領域にUIパーティクル追加シェーダーを追加する必要があります。
+グラフィックス>常に含まれるシェーダー
+
+You can manage the UI by changing / adding values on
+Menu Manager object. You can change main panel
+workflow from this object.
+の値を変更/追加することでUIを管理できます
+メニューマネージャオブジェクト。メインパネルを変更できます
+このオブジェクトからのワークフロー。
+
+GameMode
+Serve
+Receive
+
+Forehand
+Middlehand
+Backhand
+
+bIgnoreFloorBound
+bStopFloorBound
+
+================================================================
+■テニス 2か月後 (8月)
+・youtubeからPLAY動画ダウンロード
+https://www.youtube.com/watch?v=PgZYbG8m2A8
+
+・トラッキングしてみる
+  SPOCUBEP(PingPong)
+

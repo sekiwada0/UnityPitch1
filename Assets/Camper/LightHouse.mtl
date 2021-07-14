@@ -1,0 +1,34 @@
+# LightWave ExportObj(sekiwada)
+
+newmtl Grass_D
+Ns 1.8
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd Grass_D.png
+map_Bump -bm 0.140017 Grass_N.png
+
+newmtl SuperMarket_Buidling_D
+Ns 1.35
+Ka 1 1 1
+Kd 0.588235 0.549308 0.549308
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd SuperMarket_Buidling_D.png
+map_Bump -bm 0.140017 SuperMarket_Buidling_N.png
+
+newmtl CampingSite_WoodHouse_D
+Ns 0.7031
+Ka 1 1 1
+Kd 0.889706 0.90279 0.90279
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd CampingSite_WoodHouse_D.png
+map_Bump -bm 0.140017 CampingSite_WoodHouse_N.png

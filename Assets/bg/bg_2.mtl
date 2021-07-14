@@ -1,0 +1,52 @@
+# LightWave ExportObj(sekiwada)
+
+newmtl Apt_01
+Ns 18
+Ka 0 0 0
+Kd 0.588235 0.588235 0.588235
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd Apt_01.png
+
+newmtl Bridge_01
+Ns 18
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd Bridge_01.png
+map_Bump -bm 0 Bridge_01_N.jpg
+
+newmtl buildings_01
+Ns 18
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd buildings_01.png
+
+newmtl buildings_02
+Ns 18
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd buildings_02.png
+
+newmtl Stadium03_B_D
+Ns 18
+Ka 1 1 1
+Kd 0.588 0.588 0.588
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd Stadium03_B_D.png

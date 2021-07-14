@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<params>
+  <system>
+    <PitchingMachine>3Wheel2008</PitchingMachine>
+    <!-- ko:Korean, en:English, ja:Japanese -->
+    <Language>ja</Language>
+    <OPMovie>BevelLogo.mp4</OPMovie>
+    <EDMovie>BevelLogo.mp4</EDMovie>
+
+    <!-- 時間制(Time)か球数制(Ball)か -->
+    <!-- 시간제 (Time) 또는 공 수 제 (Ball) 또는 -->
+    <GameLimit>Time</GameLimit>
+    <!--GameLimit>Ball</GameLimit-->
+
+    <!-- 制限時間 -->
+    <!-- 제한 시간 -->
+    <TimeLimit>300</TimeLimit>
+    <!-- 秒表示に切り替わる時間 -->
+    <!-- 초 표시 전환 시간 -->
+    <SecondSwitching>300</SecondSwitching>
+
+    <!-- 球数制限 -->
+    <!-- 투구 수 제한 -->
+    <!--BallLimit>15</BallLimit-->
+    <BallLimit>40</BallLimit>
+
+    <!-- ゲーム開始してからモータを待つ時間(秒) -->
+    <!-- 게임 시작 후 모터를 기다리는 시간 (초) -->
+    <InitDuration>5</InitDuration>
+
+    <!-- Rest点滅時間 -->
+    <!-- Rest점멸 시간 -->
+    <RestBlink>3</RestBlink>
+
+    <!-- カウントダウンの時間(秒) -->
+    <!-- 카운트 다운 시간 (초) -->
+    <!-- CountDown>2.5</CountDown-->
+    <!-- CountDown>1.9</CountDown-->
+    <CountDown>1</CountDown>
+
+    <!--BallDestroy>0.5</BallDestroy-->
+    <BallDestroy>1</BallDestroy>
+
+    <!-- Gameカメラ位置 -->
+    <!-- Game 카메라 위치 -->
+    <Receive_CameraPosY>1.7</Receive_CameraPosY>
+    <Receive_CameraPosZ>-18.45</Receive_CameraPosZ>
+    <Receive_CameraRotX>0</Receive_CameraRotX>
+    <Receive_CameraFOV>18.31</Receive_CameraFOV>
+
+    <!--Serve_CameraPosY>43.2</Serve_CameraPosY>
+    <Serve_CameraPosZ>6.82</Serve_CameraPosZ>
+    <Serve_CameraRotX>90</Serve_CameraRotX>
+    <Serve_CameraFOV>18.31</Serve_CameraFOV-->
+    <Serve_CameraPosY>26.58</Serve_CameraPosY>
+    <Serve_CameraPosZ>4</Serve_CameraPosZ>
+    <Serve_CameraRotX>90</Serve_CameraRotX>
+    <Serve_CameraFOV>18.31</Serve_CameraFOV>
+
+    <!-- Playerの打撃位置 -->
+    <!-- Player의 타격 위치 -->
+    <!--Receive_ShootPosZ>-16.98</Receive_ShootPosZ-->
+    <Receive_ShootPosZ>-8</Receive_ShootPosZ>
+    <Serve_ShootPosZ>-12.62</Serve_ShootPosZ>
+
+    <!-- サーブモードのタイムアウト(秒) -->
+    <ServeTime>25</ServeTime>
+
+    <!-- センサのタイムアウト(秒) -->
+    <!-- 센서의 시간 제한 (초) -->
+    <!--Pitch_Timeout>0.5</Pitch_Timeout-->
+    <Pitch_Timeout>1.5</Pitch_Timeout>
+
+    <!-- ホークアイ発動する、ボールの落下地点とラインとの距離(m) -->
+    <!-- 호크 아이 발동하는 공의 낙하 지점과 라인 사이의 거리(m) -->
+    <!--HawkEyeDist>1</HawkEyeDist-->
+    <HawkEyeDist>0.5</HawkEyeDist>
+
+    <!-- サーブ開始時間(秒) -->
+    <!-- 서브 시작 시간 (초) -->
+    <EnemyServeTime>1</EnemyServeTime>
+
+    <!-- Result画面を表示している時間(秒) -->
+    <!-- Result 화면을 표시하고있는 시간 (초)-->
+    <ResultDuration>10</ResultDuration>
+
+    <!-- 発射間隔(秒) -->
+    <!--ShootInterval>2</ShootInterval-->
+    <ShootInterval>0.1</ShootInterval>
+
+    <!-- Randomモードの発射間隔(秒) -->
+    <ShootInterval_Random>1</ShootInterval_Random>
+
+    <!-- Play Area(m) -->
+    <XRange>5</XRange>
+    <ZRange>4</ZRange>
+  </system>
+  <PitchingMachine name="3Wheel2008">
+    <CtrlPort>com5</CtrlPort>
+    <WheelPort>com6</WheelPort>
+    <!-- 発射コマンドを送信してから 実際に発射するまでの時間(秒) -->
+    <!-- 발사 명령을 보낸 후 실제로 발사 할 때까지의 시간 (초) -->
+    <!-- PitchONTime>2.2</PitchONTime-->
+    <PitchONTime>1.9</PitchONTime>
+  </PitchingMachine>
+</params>

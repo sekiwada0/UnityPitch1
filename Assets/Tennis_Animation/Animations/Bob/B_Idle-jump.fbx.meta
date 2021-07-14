@@ -1,0 +1,1623 @@
+fileFormatVersion: 2
+guid: a67d3e31a9ee18e4cbe277d0bdb6d6c6
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Advanced_Biped_rig
+    100002: BD_Chest_jnt
+    100004: BD_Head_jnt
+    100006: BD_Head_Tip_jnt
+    100008: BD_Neck_jnt
+    100010: BD_Pelvis_Base_jnt
+    100012: BD_Pelvis_End_jnt
+    100014: BD_Spine_01_jnt
+    100016: BD_Spine_02_jnt
+    100018: BD_Spine_03_jnt
+    100020: BD_Spine_04_jnt
+    100022: Bind_null
+    100024: //RootNode
+    100026: L_BD_Collar_jnt
+    100028: L_BD_Collar_Tip_jnt
+    100030: L_BD_FK_Finger_Base_jnt
+    100032: L_BD_FK_Finger_Base_jnt_1
+    100034: L_BD_FK_Finger_Base_jnt_2
+    100036: L_BD_FK_Finger_Base_jnt_3
+    100038: L_BD_FK_Finger_End_jnt
+    100040: L_BD_FK_Finger_End_jnt_1
+    100042: L_BD_FK_Finger_End_jnt_2
+    100044: L_BD_FK_Finger_End_jnt_3
+    100046: L_BD_FK_Finger_Mid_jnt
+    100048: L_BD_FK_Finger_Mid_jnt_1
+    100050: L_BD_FK_Finger_Mid_jnt_2
+    100052: L_BD_FK_Finger_Mid_jnt_3
+    100054: L_BD_FK_Finger_Palm_Base_jnt
+    100056: L_BD_FK_Finger_Palm_Base_jnt_1
+    100058: L_BD_FK_Finger_Palm_Base_jnt_2
+    100060: L_BD_FK_Finger_Palm_Base_jnt_3
+    100062: L_BD_FK_Finger_Top_jnt
+    100064: L_BD_FK_Finger_Top_jnt_1
+    100066: L_BD_FK_Finger_Top_jnt_2
+    100068: L_BD_FK_Finger_Top_jnt_3
+    100070: L_BD_FK_Thumb_Base_jnt
+    100072: L_BD_FK_Thumb_End_jnt
+    100074: L_BD_FK_Thumb_Mid_jnt
+    100076: L_BD_FK_Thumb_Root_jnt
+    100078: L_BD_NB_Ankle_jnt
+    100080: L_BD_NB_Ball_jnt
+    100082: L_BD_NB_Forearm_Twist_01_jnt
+    100084: L_BD_NB_Forearm_Twist_02_jnt
+    100086: L_BD_NB_Forearm_Twist_05_tip_jnt
+    100088: L_BD_NB_Hip_jnt
+    100090: L_BD_NB_Knee_jnt
+    100092: L_BD_NB_Shoulder_jnt
+    100094: L_BD_NB_Toes_jnt
+    100096: L_BD_Wrist_01_jnt
+    100098: L_BD_Wrist_02_jnt
+    100100: R_BD_Collar_jnt
+    100102: R_BD_Collar_Tip_jnt
+    100104: R_BD_FK_Finger_Base_jnt
+    100106: R_BD_FK_Finger_Base_jnt_1
+    100108: R_BD_FK_Finger_Base_jnt_2
+    100110: R_BD_FK_Finger_Base_jnt_3
+    100112: R_BD_FK_Finger_End_jnt
+    100114: R_BD_FK_Finger_End_jnt_1
+    100116: R_BD_FK_Finger_End_jnt_2
+    100118: R_BD_FK_Finger_End_jnt_3
+    100120: R_BD_FK_Finger_Mid_jnt
+    100122: R_BD_FK_Finger_Mid_jnt_1
+    100124: R_BD_FK_Finger_Mid_jnt_2
+    100126: R_BD_FK_Finger_Mid_jnt_3
+    100128: R_BD_FK_Finger_Palm_Base_jnt
+    100130: R_BD_FK_Finger_Palm_Base_jnt_1
+    100132: R_BD_FK_Finger_Palm_Base_jnt_2
+    100134: R_BD_FK_Finger_Palm_Base_jnt_3
+    100136: R_BD_FK_Finger_Top_jnt
+    100138: R_BD_FK_Finger_Top_jnt_1
+    100140: R_BD_FK_Finger_Top_jnt_2
+    100142: R_BD_FK_Finger_Top_jnt_3
+    100144: R_BD_FK_Thumb_Base_jnt
+    100146: R_BD_FK_Thumb_End_jnt
+    100148: R_BD_FK_Thumb_Mid_jnt
+    100150: R_BD_FK_Thumb_Root_jnt
+    100152: R_BD_NB_Ankle_jnt
+    100154: R_BD_NB_Ball_jnt
+    100156: R_BD_NB_Forearm_Twist_01_jnt
+    100158: R_BD_NB_Forearm_Twist_02_jnt
+    100160: R_BD_NB_Forearm_Twist_05_tip_jnt
+    100162: R_BD_NB_Hip_jnt
+    100164: R_BD_NB_Knee_jnt
+    100166: R_BD_NB_Shoulder_jnt
+    100168: R_BD_NB_Toes_jnt
+    100170: R_BD_Wrist_01_jnt
+    100172: R_BD_Wrist_02_jnt
+    100174: Root_null
+    100176: Character
+    100178: L_BD_FK_Finger_Base_jnt_4
+    100180: L_BD_FK_Finger_End_jnt_4
+    100182: L_BD_FK_Finger_Mid_jnt_4
+    100184: L_BD_FK_Finger_Palm_Base_jnt_4
+    100186: L_BD_FK_Finger_Top_jnt_4
+    100188: R_BD_FK_Finger_Base_jnt_4
+    100190: R_BD_FK_Finger_End_jnt_4
+    100192: R_BD_FK_Finger_Mid_jnt_4
+    100194: R_BD_FK_Finger_Palm_Base_jnt_4
+    100196: R_BD_FK_Finger_Top_jnt_4
+    400000: Advanced_Biped_rig
+    400002: BD_Chest_jnt
+    400004: BD_Head_jnt
+    400006: BD_Head_Tip_jnt
+    400008: BD_Neck_jnt
+    400010: BD_Pelvis_Base_jnt
+    400012: BD_Pelvis_End_jnt
+    400014: BD_Spine_01_jnt
+    400016: BD_Spine_02_jnt
+    400018: BD_Spine_03_jnt
+    400020: BD_Spine_04_jnt
+    400022: Bind_null
+    400024: //RootNode
+    400026: L_BD_Collar_jnt
+    400028: L_BD_Collar_Tip_jnt
+    400030: L_BD_FK_Finger_Base_jnt
+    400032: L_BD_FK_Finger_Base_jnt_1
+    400034: L_BD_FK_Finger_Base_jnt_2
+    400036: L_BD_FK_Finger_Base_jnt_3
+    400038: L_BD_FK_Finger_End_jnt
+    400040: L_BD_FK_Finger_End_jnt_1
+    400042: L_BD_FK_Finger_End_jnt_2
+    400044: L_BD_FK_Finger_End_jnt_3
+    400046: L_BD_FK_Finger_Mid_jnt
+    400048: L_BD_FK_Finger_Mid_jnt_1
+    400050: L_BD_FK_Finger_Mid_jnt_2
+    400052: L_BD_FK_Finger_Mid_jnt_3
+    400054: L_BD_FK_Finger_Palm_Base_jnt
+    400056: L_BD_FK_Finger_Palm_Base_jnt_1
+    400058: L_BD_FK_Finger_Palm_Base_jnt_2
+    400060: L_BD_FK_Finger_Palm_Base_jnt_3
+    400062: L_BD_FK_Finger_Top_jnt
+    400064: L_BD_FK_Finger_Top_jnt_1
+    400066: L_BD_FK_Finger_Top_jnt_2
+    400068: L_BD_FK_Finger_Top_jnt_3
+    400070: L_BD_FK_Thumb_Base_jnt
+    400072: L_BD_FK_Thumb_End_jnt
+    400074: L_BD_FK_Thumb_Mid_jnt
+    400076: L_BD_FK_Thumb_Root_jnt
+    400078: L_BD_NB_Ankle_jnt
+    400080: L_BD_NB_Ball_jnt
+    400082: L_BD_NB_Forearm_Twist_01_jnt
+    400084: L_BD_NB_Forearm_Twist_02_jnt
+    400086: L_BD_NB_Forearm_Twist_05_tip_jnt
+    400088: L_BD_NB_Hip_jnt
+    400090: L_BD_NB_Knee_jnt
+    400092: L_BD_NB_Shoulder_jnt
+    400094: L_BD_NB_Toes_jnt
+    400096: L_BD_Wrist_01_jnt
+    400098: L_BD_Wrist_02_jnt
+    400100: R_BD_Collar_jnt
+    400102: R_BD_Collar_Tip_jnt
+    400104: R_BD_FK_Finger_Base_jnt
+    400106: R_BD_FK_Finger_Base_jnt_1
+    400108: R_BD_FK_Finger_Base_jnt_2
+    400110: R_BD_FK_Finger_Base_jnt_3
+    400112: R_BD_FK_Finger_End_jnt
+    400114: R_BD_FK_Finger_End_jnt_1
+    400116: R_BD_FK_Finger_End_jnt_2
+    400118: R_BD_FK_Finger_End_jnt_3
+    400120: R_BD_FK_Finger_Mid_jnt
+    400122: R_BD_FK_Finger_Mid_jnt_1
+    400124: R_BD_FK_Finger_Mid_jnt_2
+    400126: R_BD_FK_Finger_Mid_jnt_3
+    400128: R_BD_FK_Finger_Palm_Base_jnt
+    400130: R_BD_FK_Finger_Palm_Base_jnt_1
+    400132: R_BD_FK_Finger_Palm_Base_jnt_2
+    400134: R_BD_FK_Finger_Palm_Base_jnt_3
+    400136: R_BD_FK_Finger_Top_jnt
+    400138: R_BD_FK_Finger_Top_jnt_1
+    400140: R_BD_FK_Finger_Top_jnt_2
+    400142: R_BD_FK_Finger_Top_jnt_3
+    400144: R_BD_FK_Thumb_Base_jnt
+    400146: R_BD_FK_Thumb_End_jnt
+    400148: R_BD_FK_Thumb_Mid_jnt
+    400150: R_BD_FK_Thumb_Root_jnt
+    400152: R_BD_NB_Ankle_jnt
+    400154: R_BD_NB_Ball_jnt
+    400156: R_BD_NB_Forearm_Twist_01_jnt
+    400158: R_BD_NB_Forearm_Twist_02_jnt
+    400160: R_BD_NB_Forearm_Twist_05_tip_jnt
+    400162: R_BD_NB_Hip_jnt
+    400164: R_BD_NB_Knee_jnt
+    400166: R_BD_NB_Shoulder_jnt
+    400168: R_BD_NB_Toes_jnt
+    400170: R_BD_Wrist_01_jnt
+    400172: R_BD_Wrist_02_jnt
+    400174: Root_null
+    400176: Character
+    400178: L_BD_FK_Finger_Base_jnt_4
+    400180: L_BD_FK_Finger_End_jnt_4
+    400182: L_BD_FK_Finger_Mid_jnt_4
+    400184: L_BD_FK_Finger_Palm_Base_jnt_4
+    400186: L_BD_FK_Finger_Top_jnt_4
+    400188: R_BD_FK_Finger_Base_jnt_4
+    400190: R_BD_FK_Finger_End_jnt_4
+    400192: R_BD_FK_Finger_Mid_jnt_4
+    400194: R_BD_FK_Finger_Palm_Base_jnt_4
+    400196: R_BD_FK_Finger_Top_jnt_4
+    7400000: B_Idle-jump
+    7400002: CINEMA_4D_V2_Idle-jump
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Inbetween bone
+      rotation in copied configuration does not match rotation in animation file:\n\t'R_BD_Collar_Tip_jnt'
+      : rotation error = 2.211383 deg\n\t'R_BD_NB_Forearm_Twist_02_jnt' : rotation
+      error = 27.952898 deg\n\t'R_BD_NB_Forearm_Twist_05_tip_jnt' : rotation error
+      = 27.947525 deg\n\t'L_BD_Collar_Tip_jnt' : rotation error = 1.678129 deg\n\t'L_BD_NB_Forearm_Twist_02_jnt'
+      : rotation error = 6.327130 deg\n\t'L_BD_NB_Forearm_Twist_05_tip_jnt' : rotation
+      error = 6.325869 deg\n"
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: B_Idle-jump
+      takeName: CINEMA_4D_V2_Idle-jump
+      firstFrame: 0
+      lastFrame: 26
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Character
+        weight: 1
+      - path: Character/Advanced_Biped_rig
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Pelvis_Base_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Pelvis_Base_jnt/BD_Pelvis_End_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/BD_Neck_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/BD_Neck_jnt/BD_Head_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/BD_Neck_jnt/BD_Head_jnt/BD_Head_Tip_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt/L_BD_FK_Finger_Base_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt/L_BD_FK_Finger_Base_jnt/L_BD_FK_Finger_Mid_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt/L_BD_FK_Finger_Base_jnt/L_BD_FK_Finger_Mid_jnt/L_BD_FK_Finger_Top_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt/L_BD_FK_Finger_Base_jnt/L_BD_FK_Finger_Mid_jnt/L_BD_FK_Finger_Top_jnt/L_BD_FK_Finger_End_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_1
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_1/L_BD_FK_Finger_Base_jnt_1
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_1/L_BD_FK_Finger_Base_jnt_1/L_BD_FK_Finger_Mid_jnt_1
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_1/L_BD_FK_Finger_Base_jnt_1/L_BD_FK_Finger_Mid_jnt_1/L_BD_FK_Finger_Top_jnt_1
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_1/L_BD_FK_Finger_Base_jnt_1/L_BD_FK_Finger_Mid_jnt_1/L_BD_FK_Finger_Top_jnt_1/L_BD_FK_Finger_End_jnt_1
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_2
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_2/L_BD_FK_Finger_Base_jnt_2
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_2/L_BD_FK_Finger_Base_jnt_2/L_BD_FK_Finger_Mid_jnt_2
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_2/L_BD_FK_Finger_Base_jnt_2/L_BD_FK_Finger_Mid_jnt_2/L_BD_FK_Finger_Top_jnt_2
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_2/L_BD_FK_Finger_Base_jnt_2/L_BD_FK_Finger_Mid_jnt_2/L_BD_FK_Finger_Top_jnt_2/L_BD_FK_Finger_End_jnt_2
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_3
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_3/L_BD_FK_Finger_Base_jnt_3
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_3/L_BD_FK_Finger_Base_jnt_3/L_BD_FK_Finger_Mid_jnt_3
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_3/L_BD_FK_Finger_Base_jnt_3/L_BD_FK_Finger_Mid_jnt_3/L_BD_FK_Finger_Top_jnt_3
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_3/L_BD_FK_Finger_Base_jnt_3/L_BD_FK_Finger_Mid_jnt_3/L_BD_FK_Finger_Top_jnt_3/L_BD_FK_Finger_End_jnt_3
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Thumb_Root_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Thumb_Root_jnt/L_BD_FK_Thumb_Base_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Thumb_Root_jnt/L_BD_FK_Thumb_Base_jnt/L_BD_FK_Thumb_Mid_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Thumb_Root_jnt/L_BD_FK_Thumb_Base_jnt/L_BD_FK_Thumb_Mid_jnt/L_BD_FK_Thumb_End_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt/R_BD_FK_Finger_Base_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt/R_BD_FK_Finger_Base_jnt/R_BD_FK_Finger_Mid_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt/R_BD_FK_Finger_Base_jnt/R_BD_FK_Finger_Mid_jnt/R_BD_FK_Finger_Top_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt/R_BD_FK_Finger_Base_jnt/R_BD_FK_Finger_Mid_jnt/R_BD_FK_Finger_Top_jnt/R_BD_FK_Finger_End_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_1
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_1/R_BD_FK_Finger_Base_jnt_1
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_1/R_BD_FK_Finger_Base_jnt_1/R_BD_FK_Finger_Mid_jnt_1
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_1/R_BD_FK_Finger_Base_jnt_1/R_BD_FK_Finger_Mid_jnt_1/R_BD_FK_Finger_Top_jnt_1
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_1/R_BD_FK_Finger_Base_jnt_1/R_BD_FK_Finger_Mid_jnt_1/R_BD_FK_Finger_Top_jnt_1/R_BD_FK_Finger_End_jnt_1
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_2
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_2/R_BD_FK_Finger_Base_jnt_2
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_2/R_BD_FK_Finger_Base_jnt_2/R_BD_FK_Finger_Mid_jnt_2
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_2/R_BD_FK_Finger_Base_jnt_2/R_BD_FK_Finger_Mid_jnt_2/R_BD_FK_Finger_Top_jnt_2
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_2/R_BD_FK_Finger_Base_jnt_2/R_BD_FK_Finger_Mid_jnt_2/R_BD_FK_Finger_Top_jnt_2/R_BD_FK_Finger_End_jnt_2
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_3
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_3/R_BD_FK_Finger_Base_jnt_3
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_3/R_BD_FK_Finger_Base_jnt_3/R_BD_FK_Finger_Mid_jnt_3
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_3/R_BD_FK_Finger_Base_jnt_3/R_BD_FK_Finger_Mid_jnt_3/R_BD_FK_Finger_Top_jnt_3
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_3/R_BD_FK_Finger_Base_jnt_3/R_BD_FK_Finger_Mid_jnt_3/R_BD_FK_Finger_Top_jnt_3/R_BD_FK_Finger_End_jnt_3
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Thumb_Root_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Thumb_Root_jnt/R_BD_FK_Thumb_Base_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Thumb_Root_jnt/R_BD_FK_Thumb_Base_jnt/R_BD_FK_Thumb_Mid_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Thumb_Root_jnt/R_BD_FK_Thumb_Base_jnt/R_BD_FK_Thumb_Mid_jnt/R_BD_FK_Thumb_End_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/L_BD_NB_Hip_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/L_BD_NB_Hip_jnt/L_BD_NB_Knee_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/L_BD_NB_Hip_jnt/L_BD_NB_Knee_jnt/L_BD_NB_Ankle_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/L_BD_NB_Hip_jnt/L_BD_NB_Knee_jnt/L_BD_NB_Ankle_jnt/L_BD_NB_Ball_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/L_BD_NB_Hip_jnt/L_BD_NB_Knee_jnt/L_BD_NB_Ankle_jnt/L_BD_NB_Ball_jnt/L_BD_NB_Toes_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/R_BD_NB_Hip_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/R_BD_NB_Hip_jnt/R_BD_NB_Knee_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/R_BD_NB_Hip_jnt/R_BD_NB_Knee_jnt/R_BD_NB_Ankle_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/R_BD_NB_Hip_jnt/R_BD_NB_Knee_jnt/R_BD_NB_Ankle_jnt/R_BD_NB_Ball_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/R_BD_NB_Hip_jnt/R_BD_NB_Knee_jnt/R_BD_NB_Ankle_jnt/R_BD_NB_Ball_jnt/R_BD_NB_Toes_jnt
+        weight: 0
+      maskType: 0
+      maskSource: {fileID: 31900000, guid: 6832a66daa58a0749b95e9d4ff951184, type: 2}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: CINEMA_4D_V2_Idle-jump
+      takeName: CINEMA_4D_V2_Idle-jump
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Character
+        weight: 1
+      - path: Character/Advanced_Biped_rig
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Pelvis_Base_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Pelvis_Base_jnt/BD_Pelvis_End_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/BD_Neck_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/BD_Neck_jnt/BD_Head_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/BD_Neck_jnt/BD_Head_jnt/BD_Head_Tip_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt/L_BD_FK_Finger_Base_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt/L_BD_FK_Finger_Base_jnt/L_BD_FK_Finger_Mid_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt/L_BD_FK_Finger_Base_jnt/L_BD_FK_Finger_Mid_jnt/L_BD_FK_Finger_Top_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt/L_BD_FK_Finger_Base_jnt/L_BD_FK_Finger_Mid_jnt/L_BD_FK_Finger_Top_jnt/L_BD_FK_Finger_End_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_1
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_1/L_BD_FK_Finger_Base_jnt_1
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_1/L_BD_FK_Finger_Base_jnt_1/L_BD_FK_Finger_Mid_jnt_1
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_1/L_BD_FK_Finger_Base_jnt_1/L_BD_FK_Finger_Mid_jnt_1/L_BD_FK_Finger_Top_jnt_1
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_1/L_BD_FK_Finger_Base_jnt_1/L_BD_FK_Finger_Mid_jnt_1/L_BD_FK_Finger_Top_jnt_1/L_BD_FK_Finger_End_jnt_1
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_2
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_2/L_BD_FK_Finger_Base_jnt_2
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_2/L_BD_FK_Finger_Base_jnt_2/L_BD_FK_Finger_Mid_jnt_2
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_2/L_BD_FK_Finger_Base_jnt_2/L_BD_FK_Finger_Mid_jnt_2/L_BD_FK_Finger_Top_jnt_2
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_2/L_BD_FK_Finger_Base_jnt_2/L_BD_FK_Finger_Mid_jnt_2/L_BD_FK_Finger_Top_jnt_2/L_BD_FK_Finger_End_jnt_2
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_3
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_3/L_BD_FK_Finger_Base_jnt_3
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_3/L_BD_FK_Finger_Base_jnt_3/L_BD_FK_Finger_Mid_jnt_3
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_3/L_BD_FK_Finger_Base_jnt_3/L_BD_FK_Finger_Mid_jnt_3/L_BD_FK_Finger_Top_jnt_3
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Finger_Palm_Base_jnt_3/L_BD_FK_Finger_Base_jnt_3/L_BD_FK_Finger_Mid_jnt_3/L_BD_FK_Finger_Top_jnt_3/L_BD_FK_Finger_End_jnt_3
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Thumb_Root_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Thumb_Root_jnt/L_BD_FK_Thumb_Base_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Thumb_Root_jnt/L_BD_FK_Thumb_Base_jnt/L_BD_FK_Thumb_Mid_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/L_BD_Collar_jnt/L_BD_Collar_Tip_jnt/L_BD_NB_Shoulder_jnt/L_BD_NB_Forearm_Twist_01_jnt/L_BD_NB_Forearm_Twist_02_jnt/L_BD_NB_Forearm_Twist_05_tip_jnt/L_BD_Wrist_01_jnt/L_BD_Wrist_02_jnt/L_BD_FK_Thumb_Root_jnt/L_BD_FK_Thumb_Base_jnt/L_BD_FK_Thumb_Mid_jnt/L_BD_FK_Thumb_End_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt/R_BD_FK_Finger_Base_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt/R_BD_FK_Finger_Base_jnt/R_BD_FK_Finger_Mid_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt/R_BD_FK_Finger_Base_jnt/R_BD_FK_Finger_Mid_jnt/R_BD_FK_Finger_Top_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt/R_BD_FK_Finger_Base_jnt/R_BD_FK_Finger_Mid_jnt/R_BD_FK_Finger_Top_jnt/R_BD_FK_Finger_End_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_1
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_1/R_BD_FK_Finger_Base_jnt_1
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_1/R_BD_FK_Finger_Base_jnt_1/R_BD_FK_Finger_Mid_jnt_1
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_1/R_BD_FK_Finger_Base_jnt_1/R_BD_FK_Finger_Mid_jnt_1/R_BD_FK_Finger_Top_jnt_1
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_1/R_BD_FK_Finger_Base_jnt_1/R_BD_FK_Finger_Mid_jnt_1/R_BD_FK_Finger_Top_jnt_1/R_BD_FK_Finger_End_jnt_1
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_2
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_2/R_BD_FK_Finger_Base_jnt_2
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_2/R_BD_FK_Finger_Base_jnt_2/R_BD_FK_Finger_Mid_jnt_2
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_2/R_BD_FK_Finger_Base_jnt_2/R_BD_FK_Finger_Mid_jnt_2/R_BD_FK_Finger_Top_jnt_2
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_2/R_BD_FK_Finger_Base_jnt_2/R_BD_FK_Finger_Mid_jnt_2/R_BD_FK_Finger_Top_jnt_2/R_BD_FK_Finger_End_jnt_2
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_3
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_3/R_BD_FK_Finger_Base_jnt_3
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_3/R_BD_FK_Finger_Base_jnt_3/R_BD_FK_Finger_Mid_jnt_3
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_3/R_BD_FK_Finger_Base_jnt_3/R_BD_FK_Finger_Mid_jnt_3/R_BD_FK_Finger_Top_jnt_3
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Finger_Palm_Base_jnt_3/R_BD_FK_Finger_Base_jnt_3/R_BD_FK_Finger_Mid_jnt_3/R_BD_FK_Finger_Top_jnt_3/R_BD_FK_Finger_End_jnt_3
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Thumb_Root_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Thumb_Root_jnt/R_BD_FK_Thumb_Base_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Thumb_Root_jnt/R_BD_FK_Thumb_Base_jnt/R_BD_FK_Thumb_Mid_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/BD_Spine_02_jnt/BD_Spine_03_jnt/BD_Spine_04_jnt/BD_Chest_jnt/R_BD_Collar_jnt/R_BD_Collar_Tip_jnt/R_BD_NB_Shoulder_jnt/R_BD_NB_Forearm_Twist_01_jnt/R_BD_NB_Forearm_Twist_02_jnt/R_BD_NB_Forearm_Twist_05_tip_jnt/R_BD_Wrist_01_jnt/R_BD_Wrist_02_jnt/R_BD_FK_Thumb_Root_jnt/R_BD_FK_Thumb_Base_jnt/R_BD_FK_Thumb_Mid_jnt/R_BD_FK_Thumb_End_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/L_BD_NB_Hip_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/L_BD_NB_Hip_jnt/L_BD_NB_Knee_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/L_BD_NB_Hip_jnt/L_BD_NB_Knee_jnt/L_BD_NB_Ankle_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/L_BD_NB_Hip_jnt/L_BD_NB_Knee_jnt/L_BD_NB_Ankle_jnt/L_BD_NB_Ball_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/L_BD_NB_Hip_jnt/L_BD_NB_Knee_jnt/L_BD_NB_Ankle_jnt/L_BD_NB_Ball_jnt/L_BD_NB_Toes_jnt
+        weight: 0
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/R_BD_NB_Hip_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/R_BD_NB_Hip_jnt/R_BD_NB_Knee_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/R_BD_NB_Hip_jnt/R_BD_NB_Knee_jnt/R_BD_NB_Ankle_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/R_BD_NB_Hip_jnt/R_BD_NB_Knee_jnt/R_BD_NB_Ankle_jnt/R_BD_NB_Ball_jnt
+        weight: 1
+      - path: Character/Advanced_Biped_rig/Root_null/Bind_null/BD_Spine_01_jnt/R_BD_NB_Hip_jnt/R_BD_NB_Knee_jnt/R_BD_NB_Ankle_jnt/R_BD_NB_Ball_jnt/R_BD_NB_Toes_jnt
+        weight: 0
+      maskType: 3
+      maskSource: {fileID: 31900000, guid: 6832a66daa58a0749b95e9d4ff951184, type: 2}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: BD_Spine_01_jnt
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_NB_Hip_jnt
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_NB_Hip_jnt
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_NB_Knee_jnt
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_NB_Knee_jnt
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_NB_Ankle_jnt
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_NB_Ankle_jnt
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BD_Spine_02_jnt
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BD_Spine_03_jnt
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BD_Neck_jnt
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BD_Head_jnt
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_Collar_jnt
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_Collar_jnt
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_NB_Shoulder_jnt
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_NB_Shoulder_jnt
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_NB_Forearm_Twist_01_jnt
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_NB_Forearm_Twist_01_jnt
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_Wrist_01_jnt
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_Wrist_01_jnt
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_NB_Ball_jnt
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_NB_Ball_jnt
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_FK_Thumb_Root_jnt
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_FK_Thumb_Base_jnt
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_FK_Thumb_Mid_jnt
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_FK_Thumb_Root_jnt
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_FK_Thumb_Base_jnt
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_FK_Thumb_Mid_jnt
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: BD_Chest_jnt
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_FK_Finger_Base_jnt_1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_FK_Finger_Mid_jnt_1
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_FK_Finger_Top_jnt_1
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_FK_Finger_Base_jnt_2
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_FK_Finger_Mid_jnt_2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_FK_Finger_Top_jnt_2
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_FK_Finger_Base_jnt_3
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_FK_Finger_Mid_jnt_3
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_FK_Finger_Top_jnt_3
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_FK_Finger_Base_jnt_4
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_FK_Finger_Mid_jnt_4
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_BD_FK_Finger_Top_jnt_4
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_FK_Finger_Base_jnt_1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_FK_Finger_Mid_jnt_1
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_FK_Finger_Top_jnt_1
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_FK_Finger_Base_jnt_2
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_FK_Finger_Mid_jnt_2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_FK_Finger_Top_jnt_2
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_FK_Finger_Base_jnt_3
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_FK_Finger_Mid_jnt_3
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_FK_Finger_Top_jnt_3
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_FK_Finger_Base_jnt_4
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_FK_Finger_Mid_jnt_4
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: R_BD_FK_Finger_Top_jnt_4
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Bob(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: body
+      parentName: Bob(Clone)
+      position: {x: -7.81597e-16, y: -0.030537955, z: 0}
+      rotation: {x: -1.8041124e-16, y: -4.57967e-16, z: -8.2622395e-32, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Character
+      parentName: Bob(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0.000000006991392, y: -3.397891e-10, z: 2.3755988e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Advanced_Biped_rig
+      parentName: Character
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -1.0228707e-11, y: 2.7795988e-11, z: 2.84317e-22, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_null
+      parentName: Advanced_Biped_rig
+      position: {x: -3.0253025e-25, y: -0.000000031948574, z: 1.0644337e-11}
+      rotation: {x: -1.0228707e-11, y: 2.7795988e-11, z: 2.84317e-22, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Bind_null
+      parentName: Root_null
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -1.0228707e-11, y: 2.7795988e-11, z: 2.84317e-22, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BD_Spine_01_jnt
+      parentName: Bind_null
+      position: {x: 6.2834937e-16, y: 1.0393109, z: -0.008039253}
+      rotation: {x: 0.69821775, y: -2.9755133e-12, z: 2.9020792e-12, w: 0.71588546}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BD_Pelvis_Base_jnt
+      parentName: BD_Spine_01_jnt
+      position: {x: -3.819167e-16, y: -2.4424906e-17, z: 1.4210854e-16}
+      rotation: {x: 0.9998738, y: 4.48277e-16, z: 2.8215752e-14, w: -0.015885469}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BD_Pelvis_End_jnt
+      parentName: BD_Pelvis_Base_jnt
+      position: {x: -4.443898e-15, y: 0.00054283475, z: -0.032348398}
+      rotation: {x: 0.7106312, y: -2.9261257e-10, z: 2.9555153e-10, w: 0.7035647}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BD_Spine_02_jnt
+      parentName: BD_Spine_01_jnt
+      position: {x: -1.3078611e-14, y: 1.9844125e-14, z: -0.06274279}
+      rotation: {x: -0.015009672, y: 2.2868017e-13, z: 3.4328011e-15, w: 0.99988735}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BD_Spine_03_jnt
+      parentName: BD_Spine_02_jnt
+      position: {x: 4.137389e-17, y: -3.9968028e-16, z: -0.06274665}
+      rotation: {x: 6.109696e-15, y: -4.440892e-16, z: 2.7132501e-30, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BD_Spine_04_jnt
+      parentName: BD_Spine_03_jnt
+      position: {x: -1.02079026e-17, y: -0.0000000017929137, z: -0.06274665}
+      rotation: {x: 0.015004663, y: -1.2495767e-13, z: 1.8751588e-15, w: 0.99988747}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BD_Chest_jnt
+      parentName: BD_Spine_04_jnt
+      position: {x: -1.2849025e-15, y: 0.0000006230512, z: -0.06274278}
+      rotation: {x: 5.6459327e-11, y: 0.017238736, z: 0.9998514, w: -9.734934e-13}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BD_Neck_jnt
+      parentName: BD_Chest_jnt
+      position: {x: -2.6048216e-11, y: -1.2888889e-12, z: -0.23129892}
+      rotation: {x: 0.00000006562725, y: 0.17659558, z: 0.9842835, w: 0.000000008299996}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BD_Head_jnt
+      parentName: BD_Neck_jnt
+      position: {x: 1.4739895e-11, y: 3.907985e-15, z: -0.09236513}
+      rotation: {x: -0.13013162, y: 0.000000038251134, z: 0.0000000050203717, w: 0.99149674}
+      scale: {x: 1, y: 1, z: 1}
+    - name: BD_Head_Tip_jnt
+      parentName: BD_Head_jnt
+      position: {x: -8.205642e-10, y: 2.664535e-16, z: -0.19350989}
+      rotation: {x: 6.591949e-16, y: 2.0539126e-12, z: -3.3100765e-24, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_Collar_jnt
+      parentName: BD_Chest_jnt
+      position: {x: 0.061043374, y: -0.039776325, z: -0.16464448}
+      rotation: {x: 0.41017672, y: 0.61240023, z: -0.52994245, w: -0.41938293}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_Collar_Tip_jnt
+      parentName: L_BD_Collar_jnt
+      position: {x: -6.6435746e-15, y: -7.673861e-15, z: -0.22078514}
+      rotation: {x: -0.40643114, y: 0.12666051, z: 0.12857723, w: 0.89567786}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_NB_Shoulder_jnt
+      parentName: L_BD_Collar_Tip_jnt
+      position: {x: 2.842171e-16, y: -5.6843415e-15, z: -8.526512e-15}
+      rotation: {x: 0.30805448, y: 0.34995052, z: -0.6345762, w: 0.61640096}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_NB_Forearm_Twist_01_jnt
+      parentName: L_BD_NB_Shoulder_jnt
+      position: {x: 1.373337e-12, y: 0.000000031881473, z: -0.27852726}
+      rotation: {x: -0.0067980257, y: -0.0035412295, z: 0.70723796, w: 0.70693403}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_NB_Forearm_Twist_02_jnt
+      parentName: L_BD_NB_Forearm_Twist_01_jnt
+      position: {x: 1.314504e-14, y: -1.0999201e-13, z: -0.117406934}
+      rotation: {x: 0.000000008142851, y: 0.0000000032902217, z: 0.0012446975, w: 0.9999992}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_NB_Forearm_Twist_05_tip_jnt
+      parentName: L_BD_NB_Forearm_Twist_02_jnt
+      position: {x: 7.700673e-10, y: -0.0000000019127389, z: -0.11738346}
+      rotation: {x: -0.000000008150642, y: -0.0000000032699057, z: 0.0012444486, w: 0.9999992}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_Wrist_01_jnt
+      parentName: L_BD_NB_Forearm_Twist_05_tip_jnt
+      position: {x: 0.00000001777575, y: -2.0494894e-11, z: -0.000023481827}
+      rotation: {x: 0.0017405718, y: -0.061527204, z: 0.00000024846824, w: 0.9981039}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_Wrist_02_jnt
+      parentName: L_BD_Wrist_01_jnt
+      position: {x: 5.471179e-15, y: -3.694822e-15, z: -0.061250977}
+      rotation: {x: -7.708843e-12, y: -0.7165543, z: -7.884078e-12, w: 0.69753134}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Finger_Palm_Base_jnt_1
+      parentName: L_BD_Wrist_02_jnt
+      position: {x: 0.00971783, y: 0.0054466077, z: 0.04508584}
+      rotation: {x: 0.052116323, y: 0.79502517, z: 0.10138134, w: 0.595769}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Finger_Base_jnt_1
+      parentName: L_BD_FK_Finger_Palm_Base_jnt_1
+      position: {x: -5.3290705e-15, y: -2.1884716e-14, z: -0.07048934}
+      rotation: {x: 0.011040342, y: -0.009889782, z: 0.0013984853, w: 0.9998892}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Finger_Mid_jnt_1
+      parentName: L_BD_FK_Finger_Base_jnt_1
+      position: {x: -1.4921397e-15, y: -1.4210855e-14, z: -0.052345317}
+      rotation: {x: 1.0704068e-13, y: -1.2552459e-14, z: 1.110223e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Finger_Top_jnt_1
+      parentName: L_BD_FK_Finger_Mid_jnt_1
+      position: {x: -1.9184653e-15, y: -1.7053025e-14, z: -0.03380871}
+      rotation: {x: -0.0004844799, y: -1.2886739e-12, z: -5.6882556e-16, w: 0.9999999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Finger_End_jnt_1
+      parentName: L_BD_FK_Finger_Top_jnt_1
+      position: {x: -3.907985e-15, y: -9.663381e-15, z: -0.028208613}
+      rotation: {x: 0.0043373364, y: -0.7070935, z: -0.0043373345, w: 0.7070935}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Finger_Palm_Base_jnt_2
+      parentName: L_BD_Wrist_02_jnt
+      position: {x: 0.0066994675, y: 0.009521365, z: 0.026799437}
+      rotation: {x: 0.054352116, y: 0.7420155, z: 0.044963177, w: 0.6666613}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Finger_Base_jnt_2
+      parentName: L_BD_FK_Finger_Palm_Base_jnt_2
+      position: {x: 1.1013412e-15, y: -1.5063505e-14, z: -0.07048934}
+      rotation: {x: -0.024074832, y: 0.059478723, z: -0.01256038, w: 0.99786025}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Finger_Mid_jnt_2
+      parentName: L_BD_FK_Finger_Base_jnt_2
+      position: {x: 3.2329693e-15, y: -1.4210854e-15, z: -0.055904802}
+      rotation: {x: 2.9533667e-16, y: 1.6819733e-10, z: 2.0816682e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Finger_Top_jnt_2
+      parentName: L_BD_FK_Finger_Mid_jnt_2
+      position: {x: 9.592326e-16, y: -1.0516033e-14, z: -0.0361077}
+      rotation: {x: -8.326673e-17, y: 3.535542e-10, z: 3.6429193e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Finger_End_jnt_2
+      parentName: L_BD_FK_Finger_Top_jnt_2
+      position: {x: -1.7408296e-15, y: -3.410605e-15, z: -0.030126797}
+      rotation: {x: 0.0043373364, y: -0.7070935, z: -0.0043373345, w: 0.7070935}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Finger_Palm_Base_jnt_3
+      parentName: L_BD_Wrist_02_jnt
+      position: {x: 0.0022713512, y: 0.015499277, z: -0.000027792932}
+      rotation: {x: -0.019172963, y: 0.730587, z: 0.072192475, w: 0.67872185}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Finger_Base_jnt_3
+      parentName: L_BD_FK_Finger_Palm_Base_jnt_3
+      position: {x: 2.096101e-15, y: -8.5265126e-16, z: -0.07048934}
+      rotation: {x: 0.053970512, y: 0.055607293, z: 0.009300859, w: 0.9969497}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Finger_Mid_jnt_3
+      parentName: L_BD_FK_Finger_Base_jnt_3
+      position: {x: 1.190159e-15, y: 8.526512e-15, z: -0.052345317}
+      rotation: {x: -5.030698e-17, y: 1.6819729e-10, z: -1.3877788e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Finger_Top_jnt_3
+      parentName: L_BD_FK_Finger_Mid_jnt_3
+      position: {x: -3.907985e-16, y: -2.8421708e-15, z: -0.03380871}
+      rotation: {x: 1.5699247e-16, y: 3.5355385e-10, z: -7.2858386e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Finger_End_jnt_3
+      parentName: L_BD_FK_Finger_Top_jnt_3
+      position: {x: -2.6645353e-15, y: 1.9895197e-15, z: -0.028208613}
+      rotation: {x: 0.0043373364, y: -0.7070935, z: -0.0043373345, w: 0.7070935}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Finger_Palm_Base_jnt_4
+      parentName: L_BD_Wrist_02_jnt
+      position: {x: 0.0132005485, y: 0.014113555, z: 0.0032364791}
+      rotation: {x: -0.07375139, y: 0.65585476, z: 0.057722945, w: 0.74905497}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Finger_Base_jnt_4
+      parentName: L_BD_FK_Finger_Palm_Base_jnt_4
+      position: {x: 0.020797605, y: -0.00068350334, z: -0.07993718}
+      rotation: {x: 0.07555302, y: 0.15684973, z: -0.007866019, w: 0.984697}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Finger_Mid_jnt_4
+      parentName: L_BD_FK_Finger_Base_jnt_4
+      position: {x: 1.4566126e-15, y: 4.5474734e-15, z: -0.037294608}
+      rotation: {x: 1.3713336e-13, y: -7.799317e-15, z: -4.1633363e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Finger_Top_jnt_4
+      parentName: L_BD_FK_Finger_Mid_jnt_4
+      position: {x: 5.32907e-16, y: -7.1054274e-15, z: -0.025210222}
+      rotation: {x: -7.9068696e-14, y: 1.0880186e-14, z: -4.1633363e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Finger_End_jnt_4
+      parentName: L_BD_FK_Finger_Top_jnt_4
+      position: {x: 1.5276668e-15, y: 0, z: -0.023000708}
+      rotation: {x: 0.0039947624, y: -0.7070955, z: -0.0039947624, w: 0.7070955}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Thumb_Root_jnt
+      parentName: L_BD_Wrist_02_jnt
+      position: {x: 0.030190235, y: -0.019774152, z: 0.05467516}
+      rotation: {x: 0.65751284, y: 0.68468934, z: 0.25357944, w: 0.18594326}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Thumb_Base_jnt
+      parentName: L_BD_FK_Thumb_Root_jnt
+      position: {x: 6.82121e-15, y: 3.0553336e-15, z: -0.048337072}
+      rotation: {x: -0.023844115, y: -0.00000003539775, z: 0.0000028225493, w: 0.9997157}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Thumb_Mid_jnt
+      parentName: L_BD_FK_Thumb_Base_jnt
+      position: {x: -3.3588776e-12, y: 4.0500935e-15, z: -0.03864068}
+      rotation: {x: -0.015896915, y: 6.5247543e-11, z: 1.0374351e-12, w: 0.99987364}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_FK_Thumb_End_jnt
+      parentName: L_BD_FK_Thumb_Mid_jnt
+      position: {x: -2.6187763e-12, y: 1.9184653e-15, z: -0.030167507}
+      rotation: {x: 1.881828e-14, y: -5.3929083e-14, z: 1.110223e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_Collar_jnt
+      parentName: BD_Chest_jnt
+      position: {x: -0.061043374, y: -0.039776325, z: -0.16464448}
+      rotation: {x: -0.41017672, y: 0.61240023, z: -0.52994245, w: 0.41938293}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_Collar_Tip_jnt
+      parentName: R_BD_Collar_jnt
+      position: {x: 3.907985e-16, y: 1.4210854e-15, z: -0.22078514}
+      rotation: {x: -0.41048235, y: -0.123910055, z: -0.12774612, w: 0.894333}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_NB_Shoulder_jnt
+      parentName: R_BD_Collar_Tip_jnt
+      position: {x: 1.7763568e-17, y: -5.6843415e-15, z: -8.2422955e-15}
+      rotation: {x: 0.31362605, y: -0.35526884, z: 0.63188994, w: 0.6133008}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_NB_Forearm_Twist_01_jnt
+      parentName: R_BD_NB_Shoulder_jnt
+      position: {x: -8.479262e-10, y: 0.000000034524597, z: -0.27852726}
+      rotation: {x: -0.009234249, y: 0.0031716519, z: -0.7072545, w: 0.7068916}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_NB_Forearm_Twist_02_jnt
+      parentName: R_BD_NB_Forearm_Twist_01_jnt
+      position: {x: -1.04094505e-14, y: -1.0174972e-13, z: -0.117406934}
+      rotation: {x: 1.4794623e-14, y: -2.3326178e-14, z: -0.0012446997, w: 0.9999992}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_NB_Forearm_Twist_05_tip_jnt
+      parentName: R_BD_NB_Forearm_Twist_02_jnt
+      position: {x: -1.4779288e-14, y: -1.04591886e-13, z: -0.11738346}
+      rotation: {x: 3.3287593e-13, y: -1.8104972e-14, z: -0.0012444507, w: 0.9999992}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_Wrist_01_jnt
+      parentName: R_BD_NB_Forearm_Twist_05_tip_jnt
+      position: {x: -0.000000017771741, y: 1.3908732e-11, z: -0.00002348176}
+      rotation: {x: 0.0017405703, y: 0.061527204, z: -0.00000024846844, w: 0.9981039}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_Wrist_02_jnt
+      parentName: R_BD_Wrist_01_jnt
+      position: {x: -7.1409545e-15, y: -1.1368683e-14, z: -0.061250977}
+      rotation: {x: -7.746449e-12, y: 0.7165543, z: 7.897337e-12, w: 0.69753134}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Finger_Palm_Base_jnt_1
+      parentName: R_BD_Wrist_02_jnt
+      position: {x: -0.00971783, y: 0.0054466077, z: 0.04508584}
+      rotation: {x: 0.08188363, y: -0.7894237, z: -0.12953381, w: 0.5944126}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Finger_Base_jnt_1
+      parentName: R_BD_FK_Finger_Palm_Base_jnt_1
+      position: {x: 7.460698e-15, y: -2.245315e-14, z: -0.07048934}
+      rotation: {x: 0.010323613, y: 0.01229131, z: -0.0017373112, w: 0.9998697}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Finger_Mid_jnt_1
+      parentName: R_BD_FK_Finger_Base_jnt_1
+      position: {x: 3.7374546e-14, y: -1.2221334e-14, z: -0.052345317}
+      rotation: {x: 6.7249374e-14, y: -2.6680047e-15, z: -3.7470027e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Finger_Top_jnt_1
+      parentName: R_BD_FK_Finger_Mid_jnt_1
+      position: {x: 2.3518964e-14, y: -1.2221334e-14, z: -0.03380871}
+      rotation: {x: -0.0004844799, y: 1.1898855e-12, z: 8.540315e-16, w: 0.9999999}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Finger_End_jnt_1
+      parentName: R_BD_FK_Finger_Top_jnt_1
+      position: {x: 1.6484591e-14, y: -9.663381e-15, z: -0.028208613}
+      rotation: {x: 0.0043373364, y: 0.7070935, z: 0.0043373345, w: 0.7070935}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Finger_Palm_Base_jnt_2
+      parentName: R_BD_Wrist_02_jnt
+      position: {x: -0.005576451, y: 0.011037427, z: 0.01999577}
+      rotation: {x: 0.08087563, y: -0.72476405, z: -0.07588195, w: 0.68001336}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Finger_Base_jnt_2
+      parentName: R_BD_FK_Finger_Palm_Base_jnt_2
+      position: {x: 0.009976867, y: -0.00000005636199, z: -0.07048934}
+      rotation: {x: -0.018535612, y: -0.08310903, z: 0.024349956, w: 0.9960705}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Finger_Mid_jnt_2
+      parentName: R_BD_FK_Finger_Base_jnt_2
+      position: {x: 3.1477042e-14, y: -4.5474734e-15, z: -0.052345317}
+      rotation: {x: -5.800747e-16, y: 0.000000020340014, z: -0.000000007450581, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Finger_Top_jnt_2
+      parentName: R_BD_FK_Finger_Mid_jnt_2
+      position: {x: 1.9326763e-14, y: -7.673861e-15, z: -0.03380871}
+      rotation: {x: -6.252328e-16, y: 0.000000025176282, z: -0.000000025809568, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Finger_End_jnt_2
+      parentName: R_BD_FK_Finger_Top_jnt_2
+      position: {x: 1.3287149e-14, y: -5.6843415e-15, z: -0.028208613}
+      rotation: {x: 0.0043373373, y: 0.7070935, z: 0.0043373336, w: 0.7070935}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Finger_Palm_Base_jnt_3
+      parentName: R_BD_Wrist_02_jnt
+      position: {x: -0.0041999575, y: 0.015141619, z: 0.0018598847}
+      rotation: {x: -0.014593804, y: -0.6529978, z: -0.119754255, w: 0.74768966}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Finger_Base_jnt_3
+      parentName: R_BD_FK_Finger_Palm_Base_jnt_3
+      position: {x: 0.009976867, y: -0.00000005636198, z: -0.07048934}
+      rotation: {x: 0.087570384, y: -0.15361781, z: 0.011015626, w: 0.9841807}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Finger_Mid_jnt_3
+      parentName: R_BD_FK_Finger_Base_jnt_3
+      position: {x: 2.5899283e-14, y: -3.9790393e-15, z: -0.052345317}
+      rotation: {x: -2.029892e-16, y: 0.000000020340014, z: -0.000000007450581, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Finger_Top_jnt_3
+      parentName: R_BD_FK_Finger_Mid_jnt_3
+      position: {x: 1.5738521e-14, y: -7.389644e-15, z: -0.03380871}
+      rotation: {x: -5.9856144e-16, y: 0.000000025176282, z: -0.000000025809568, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Finger_End_jnt_3
+      parentName: R_BD_FK_Finger_Top_jnt_3
+      position: {x: 1.0338396e-14, y: -4.5474734e-15, z: -0.028208613}
+      rotation: {x: 0.0043373373, y: 0.7070935, z: 0.0043373336, w: 0.7070935}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Finger_Palm_Base_jnt_4
+      parentName: R_BD_Wrist_02_jnt
+      position: {x: -0.010456964, y: 0.0049258852, z: -0.017584402}
+      rotation: {x: -0.04957684, y: -0.6535091, z: -0.03697953, w: 0.7543876}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Finger_Base_jnt_4
+      parentName: R_BD_FK_Finger_Palm_Base_jnt_4
+      position: {x: -1.1048939e-14, y: -1.6768808e-14, z: -0.076884754}
+      rotation: {x: 0.04020733, y: -0.15883091, z: 0.014590452, w: 0.9863788}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Finger_Mid_jnt_4
+      parentName: R_BD_FK_Finger_Base_jnt_4
+      position: {x: 8.5265126e-16, y: 5.684342e-16, z: -0.03554192}
+      rotation: {x: 5.2957638e-14, y: 1.0713652e-14, z: 1.3877788e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Finger_Top_jnt_4
+      parentName: R_BD_FK_Finger_Mid_jnt_4
+      position: {x: 1.065814e-15, y: -6.252776e-15, z: -0.025678577}
+      rotation: {x: -3.1655234e-14, y: -6.1645133e-14, z: 2.7755576e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Finger_End_jnt_4
+      parentName: R_BD_FK_Finger_Top_jnt_4
+      position: {x: -1.5276668e-15, y: -1.1368684e-15, z: -0.020194948}
+      rotation: {x: 0.0039947624, y: 0.7070955, z: 0.0039947624, w: 0.7070955}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Thumb_Root_jnt
+      parentName: R_BD_Wrist_02_jnt
+      position: {x: -0.030190235, y: -0.019774152, z: 0.05467516}
+      rotation: {x: -0.6564855, y: 0.6847608, z: 0.2563855, w: -0.18546136}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Thumb_Base_jnt
+      parentName: R_BD_FK_Thumb_Root_jnt
+      position: {x: -1.2221334e-14, y: 1.563194e-15, z: -0.048337072}
+      rotation: {x: -0.023844115, y: 0.000000035495226, z: -0.0000028153934, w: 0.9997157}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Thumb_Mid_jnt
+      parentName: R_BD_FK_Thumb_Base_jnt
+      position: {x: -2.0784795e-12, y: 1.2789769e-15, z: -0.03864068}
+      rotation: {x: -0.015896915, y: 1.3584747e-10, z: 2.1598146e-12, w: 0.99987364}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_FK_Thumb_End_jnt
+      parentName: R_BD_FK_Thumb_Mid_jnt
+      position: {x: -2.7671376e-12, y: -1.1368684e-15, z: -0.030167507}
+      rotation: {x: -6.403211e-14, y: -1.2864709e-14, z: -5.551115e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_NB_Hip_jnt
+      parentName: BD_Spine_01_jnt
+      position: {x: -0.10820659, y: 0.018378433, z: 0.06021746}
+      rotation: {x: 0.008259711, y: 0.9933153, z: 0.052295912, w: 0.102575585}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_NB_Knee_jnt
+      parentName: L_BD_NB_Hip_jnt
+      position: {x: -0.000016347043, y: -0.000023334944, z: -0.44376034}
+      rotation: {x: -0.029548287, y: -0.0009884405, z: -0.00015523899, w: 0.99956286}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_NB_Ankle_jnt
+      parentName: L_BD_NB_Knee_jnt
+      position: {x: 1.996625e-14, y: -2.6894041e-14, z: -0.4528181}
+      rotation: {x: 0.5347005, y: 0.0893853, z: -0.052949354, w: 0.83863103}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_NB_Ball_jnt
+      parentName: L_BD_NB_Ankle_jnt
+      position: {x: 3.5313972e-14, y: 9.086065e-15, z: -0.1458925}
+      rotation: {x: 0.2655396, y: 0.00000004620111, z: 0.000000009291338, w: 0.96409994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_BD_NB_Toes_jnt
+      parentName: L_BD_NB_Ball_jnt
+      position: {x: -2.1105755e-10, y: -5.6288304e-16, z: -0.09880006}
+      rotation: {x: 3.0503692e-12, y: 0.99984074, z: 0.01784861, w: -1.708717e-10}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_NB_Hip_jnt
+      parentName: BD_Spine_01_jnt
+      position: {x: 0.10820659, y: 0.018378433, z: 0.06021746}
+      rotation: {x: -0.008259702, y: 0.9933153, z: 0.052295946, w: -0.102575585}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_NB_Knee_jnt
+      parentName: R_BD_NB_Hip_jnt
+      position: {x: 0.000016349133, y: -0.000023334944, z: -0.44376034}
+      rotation: {x: -0.029548287, y: 0.0009884365, z: 0.00015523811, w: 0.99956286}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_NB_Ankle_jnt
+      parentName: R_BD_NB_Knee_jnt
+      position: {x: -0.000000002053108, y: -1.9184654e-14, z: -0.4528181}
+      rotation: {x: 0.5347012, y: -0.08938528, z: 0.05294937, w: 0.8386306}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_NB_Ball_jnt
+      parentName: R_BD_NB_Ankle_jnt
+      position: {x: -9.4715346e-14, y: -1.5392132e-14, z: -0.14589262}
+      rotation: {x: 0.2655386, y: 0.00000002608211, z: 0.000000007659763, w: 0.96410024}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_BD_NB_Toes_jnt
+      parentName: R_BD_NB_Ball_jnt
+      position: {x: -2.0471738e-10, y: 2.8638203e-15, z: -0.09880006}
+      rotation: {x: 1.0781525e-10, y: 0.99984074, z: 0.01784861, w: -0.00000000603955}
+      scale: {x: 1, y: 1, z: 1}
+    - name: eye
+      parentName: Bob(Clone)
+      position: {x: -7.81597e-16, y: -0.030537955, z: 0}
+      rotation: {x: -1.8041124e-16, y: -4.57967e-16, z: -8.2622395e-32, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: hairs
+      parentName: Bob(Clone)
+      position: {x: -0.00012133598, y: 1.6775672, z: 0.025104655}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: internal
+      parentName: Bob(Clone)
+      position: {x: 1.7763568e-17, y: 0.0038889204, z: 0.03833802}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: teeth
+      parentName: internal
+      position: {x: -0, y: -0.01819519, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: tongue
+      parentName: internal
+      position: {x: -0, y: -0.01819519, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: shoes
+      parentName: Bob(Clone)
+      position: {x: -0, y: 0.00059832167, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: shorts
+      parentName: Bob(Clone)
+      position: {x: -0, y: -0.030537955, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: socks
+      parentName: Bob(Clone)
+      position: {x: -0, y: -0.030537955, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: t_shirt
+      parentName: Bob(Clone)
+      position: {x: -0, y: -0.030537955, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: b7d77733ce0bc254681beddac46b13a0,
+    type: 3}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,51 @@
+# LightWave ExportObj(sekiwada)
+
+newmtl court
+Ns 40
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+Ni 1
+d 0
+illum 1
+map_Kd court.png
+
+newmtl atlas_3
+Ns 40
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+Ni 1
+d 0
+illum 1
+map_Kd atlas_3.png
+
+newmtl net
+Ns 40
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+Ni 1
+d 0
+illum 1
+map_Kd net_map.png
+
+newmtl ballShadow
+Ns 40
+Ka 1 1 1
+Kd 0 0 0
+Ks 0 0 0
+Ni 1
+d 0
+illum 1
+map_Kd Default-Particle.png
+
+newmtl chair
+Ns 40
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+Ni 1
+d 0
+illum 1
+map_Kd court2_chair.png

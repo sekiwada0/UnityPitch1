@@ -1,0 +1,23 @@
+# LightWave ExportObj(sekiwada)
+
+newmtl CampingSite_Pool_Shops_D
+Ns 0.54
+Ka 1 1 1
+Kd 1 1 1
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd CampingSite_Pool_Shops_D.png
+map_Bump -bm 0.140017 CampingSite_Pool_Shops_N.png
+
+newmtl CampingSite_WoodHouse_D
+Ns 0.7031
+Ka 1 1 1
+Kd 0.889706 0.90279 0.90279
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd CampingSite_WoodHouse_D.png
+map_Bump -bm 0.140017 CampingSite_WoodHouse_N.png

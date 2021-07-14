@@ -1,0 +1,23 @@
+# LightWave ExportObj(sekiwada)
+
+newmtl Sand
+Ns 1.8
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd Sand_D.png
+map_Bump -bm 0.140017 Sand_N.png
+
+newmtl Grass
+Ns 1.8
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd Grass_D.png
+map_Bump -bm 0.140017 Grass_N.png

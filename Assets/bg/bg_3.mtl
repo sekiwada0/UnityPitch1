@@ -1,0 +1,31 @@
+# LightWave ExportObj(sekiwada)
+
+newmtl Mou_01
+Ns 18
+Ka 1 1 1
+Kd 0.588 0.588 0.588
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd Mou_01.png
+
+newmtl Tree_01
+Ns 18
+Ka 1 1 1
+Kd 0.588 0.588 0.588
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd Tree_01.png
+
+newmtl Stadium03_B_D
+Ns 18
+Ka 1 1 1
+Kd 0.588 0.588 0.588
+Ks 0 0 0
+Ni 1.45
+d 0
+illum 1
+map_Kd Stadium03_B_D.png

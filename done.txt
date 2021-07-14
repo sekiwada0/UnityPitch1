@@ -1,0 +1,285 @@
+
+================================================================
+■速度/向きのパラメータ設定
+・
+  Beginner/Ama/Pro
+  LEFT/CENTER/RIGHT/VOLLEY
+
+・プリセットをDLLで保持して DLLに対して名前でプリセット指定する(?)
+  => W3Ctrl.csの中で xmlを読み込んで それに対してLevel指定する
+    DLLでも良いが C#で処理する事を考えてみる..
+    文字列を 空白で分割して処理したい
+https://www.dotnetperls.com/split
+string.Split
+	private static void SplitFunc2(string text)
+	{
+		//var array = text.Split(new char[] {' '}, StringSplitOptions.RemoveEmptyEntries);
+		string[] array = text.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+		foreach (string word in array)
+		{
+			Console.WriteLine($"[2] {word}");
+		}
+	}
+
+  => 速度指定は wheelの値ではなく Level=Beginner/Ama/Pro, 向き=Left/Center/Right, Volley=ON/OFF
+     で指定(?)
+
+Beginner
+W3Ctrl.setLevel( W3Ctrl.Beginner );
+W3Ctrl.setLevel( W3Ctrl.Ama );
+W3Ctrl.setLevel( W3Ctrl.Pro );
+
+W3Ctrl.setDir( W3Ctrl.Left );
+W3Ctrl.setDir( W3Ctrl.Center );
+W3Ctrl.setDir( W3Ctrl.Right );
+
+bool volley;
+W3Ctrl.setVolley( volley );
+
+	{'1', {1000, 1000, 1000, 0, 0}}, /*Beginner_LEFT*/
+	{'2', {1000, 1000, 1000, 3, 0}}, /*Beginner_CENTER*/
+	{'3', {1000, 1000, 1000, 5, 0}}, /*Beginner_RIGHT*/
+	{'4', {1000, 1000, 1000, 5, 40}}, /*Beginner_VOLLEY*/
+
+	{'q', {1600, 1600, 1600, 0, 0}}, /*AMA_LEFT*/
+	{'w', {1700, 1700, 1700, 0, 0}}, /*AMA_CENTER*/
+	{'e', {1200, 1200, 1200, 0, 5}}, /*AMA_RIGHT*/
+	{'r', {1200, 1200, 1200, 3, 5}}, /*AMA_VOLLEY*/
+
+	{'a', {1200, 1200, 1200, 6, 5}}, /*PRO_LEFT*/
+	{'s', {1300, 1300, 1300, 0, 0}}, /*PRO_CENTER*/
+	{'d', {1400, 1400, 1400, 0, 0}}, /*PRO_RIGHT*/
+	{'f', {1500, 1500, 1500, 0, 0}} /*PRO_VOLLEY*/
+
+[Beginner_LEFT]
+WHEEL1=1000
+WHEEL2=1000
+WHEEL3=1000
+LR=0
+TB=0
+
+[Beginner_CENTER]
+WHEEL1=1000
+WHEEL2=1000
+WHEEL3=1000
+LR=3
+TB=0
+
+[Beginner_RIGHT]
+WHEEL1=1000
+WHEEL2=1000
+WHEEL3=1000
+LR=5
+TB=0
+
+・Level設定を Settings.xml で行う(?)
+  => Menuで選択
+  => 各Levelでのモータ値は 別xmlから読み取る
+<?xml version="1.0" encoding="UTF-8"?>
+<WheelParams>
+  <Level name="Beginner">
+    <ParamSet name="Left" wheel="1000 1000 1000" LR="0" TB="0"/>
+    <ParamSet name="Center" wheel="1000 1000 1000" LR="3" TB="0"/>
+    <ParamSet name="Right" wheel="1000 1000 1000" LR="5" TB="0"/>
+    <ParamSet name="Volley" wheel="1000 1000 1300" LR="5" TB="40"/>
+  </Level>
+  <Level name="Ama">
+    <ParamSet name="Left" wheel="1600 1600 1600" LR="0" TB="0"/>
+    <ParamSet name="Center" wheel="1700 1700 1700" LR="0" TB="0"/>
+    <ParamSet name="Right" wheel="1200 1200 1200" LR="0" TB="5"/>
+    <ParamSet name="Volley" wheel="1200 1200 1200" LR="3" TB="5"/>
+  </Level>
+  <Level name="Pro">
+    <ParamSet name="Left" wheel="1200 1200 1200" LR="6" TB="5"/>
+    <ParamSet name="Center" wheel="1300 1300 1300" LR="0" TB="0"/>
+    <ParamSet name="Right" wheel="1400 1400 1400" LR="0" TB="0"/>
+    <ParamSet name="Volley" wheel="1500 1500 1500" LR="0" TB="0"/>
+  </Level>
+</WheelParams>
+  => OK
+
+================================================================
+■TODO
+・Beginner / AMA / PRO の画像作成
+  BGカラーにテキスト
+  => OK
+
+・Levelメニュー
+  => ビギナー / アマ / プロを選択
+  => サーブ / レシーブ との関連を整理する必要がある..
+    => サーブには ビギナー / アマ / プロの選択は無い
+    => レシーブタイプを選択した後 ビギナー / アマ / プロの選択へ移動
+    => どれかを選ぶとゲーム開始
+  => OK
+
+・Demoの内容を Menuに適用
+  SkyDome OK
+  FOG OK
+  カメラ設定 OK
+  カメラアニメーション OK
+  CameraScript OK
+  INSERT COIN OK
+  CREDIT検出 -> MenuManager / BackGroundsをアクティブに
+  -> Activeにするリスト 非Activeにするリストがあっても良いかも(?)
+  -> OK
+
+・Motor ONにした後 ボール発射するまで 数秒待つ
+  -> OK
+
+・位置がランダムに変わらなくなる
+  => OK
+
+・READY文字も出ない
+  => OK
+
+・ALT+Cで終了も出来ない
+  => OK
+
+・カウントダウンがちょっと長い
+  => OK
+
+・Game画面
+  ・成績データ蓄積
+  => OK
+  ・時間/球数設定
+  ・残り時間表示
+  ・残り球表示
+  => OK
+
+・打たなかった時の 判定を見直し
+  => OK
+
+・Result画面
+  ・同じシーンにする
+    => OK
+  ・Activeのタイミング
+    => OK
+  ・数字設定
+    => OK
+
+・パラメータでshootタイミングを調整可能に
+  => PitchONTime
+  => OK
+
+・xmlで速度設定
+  => OK
+
+・カメラ位置を xmlで設定
+<before>
+CameraPosY 1.7
+CameraPosZ -12.41
+CameraRotX 0
+CameraFOV 40.0
+
+<after>
+CameraPosY 3
+CameraPosZ -16.98
+CameraRotX 9.71
+CameraFOV 40
+  => OK
+
+・Game内で 成績データ収集
+  => OK
+
+・Result表示
+  => OK
+
+・Def_Pitch_Timeout 500
+  => これが短かすぎる..
+  => 1000か1500ぐらいで良いかも(?)
+  => UI追加するのもアレだし ファイルで設定する(?)
+  => デフォルト値は500でも良いが xmlで変更可能にしてみる
+  => OK
+
+・ゲーム開始したら 2秒間隔で発射
+  位置をランダム(?)
+  => OK
+
+・エラー発生
+[4056] [0] getServerLocation failed
+  => 本番 / テストサーバーの種類が違っていた
+  => OK
+
+================================================================
+■Menu依頼
+1. COIN入力待ち
+  表示 "INSERT COIN"
+  -> COIN入力があったら 2.へ
+
+2. 2択画面
+  サーブ / レシーブ
+  -> サーブ選択したら グローバル変数に設定して ゲーム開始 (変数はダミーで良い)
+  -> レシーブ選択したら 3.へ
+
+3. 3択画面
+  フォアハンド / ミドルハンド / バックハンド
+  2_1 2_2
+  -> 選択した項目を変数に設定して ゲーム開始 (変数はダミーで良い)
+
+4. ボレー
+  -> 
+
+5.
+  サーブ / レシーブ
+
+あと コイン入力の仕様を決める必要があります
+先方のProject_Tennis プログラム中の _CARD_TOUCH ("sb8e") の受信がトリガになる気もしますが..
+これで良いのかどうか
+
+ロビー画面で 練習メニュー選択するシーンを作ってもらえるでしょうか?
+
+画面構成は以下のような感じになると思います
+
+あとやはり ロビー画面が必要との事でした デバイスはタッチパネルです
+
+Receiveボタンによる移動出来ているんですよね
+
+多分クリックによるアニメーションを再生する必要があるので OnClickではなく
+
+アニメーション再生のイベントとかからかな-?
+一旦この状態で シーンファイル送ってもらえるでしょうか
+
+コインの仕様は何かまだよく分かっていません
+
+一昨日 李さんに聞いた時は こちらから仕様を決めて 提案していく..みたいなニュアンスだったような..?
+個人的には 昨日送った Project_Tennis プログラム中の _CARD_TOUCH文字列("sb8e") の受信がトリガになる気もしますが..
+
+とりあえずは暫定で キーボードのスペースとか そうゆうのに割り当てて良いと思います
+
+================================================================
+■発射タイミング調整
+f133 カウントダウン開始
+f176 発射コマンド
+f191 カウントダウン終了
+f245 実際にボール出る
+  -> 112 (3.733333333333333 sec)
+  -> 69 (2.3)
+
+================================================================
+■Saperaカメラ設定
+169.254.246.7
+169.254.141.76
+
+================================================================
+■シーン調整
+・ground
+  コンクリ + 草
+  => OK
+
+・フェンス
+  網
+  柱
+  => OK
+
+・コートのエッジ処理
+  => OK
+
+・高い山
+  海の反対側
+  => OK
+
+・groundの端を持ち上げる
+  => 10m
+  => OK
+

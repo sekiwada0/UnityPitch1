@@ -1,0 +1,12 @@
+# LightWave ExportObj(sekiwada)
+mtllib Mou_01.mtl
+v -183.934998 0 -0
+v 183.934998 0 -0
+v -183.934998 90.379936 -0
+v 183.934998 90.379936 -0
+vt 0 1
+vt 1 1
+vt 1 0
+vt 0 0
+usemtl Mou_01
+f 1/4 2/3 4/2 3/1

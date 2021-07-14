@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WheelParams>
+  <Level name="System">
+    <ParamSet name="Origin" wheel="800 800 800" LR="0" TB="0"/>
+  </Level>
+  <Level name="Serve">
+    <ParamSet name="Center" wheel="800 1000 800" LR="5" TB="35"/>
+  </Level>
+  <Level name="Beginner">
+    <ParamSet name="Stroke:Left" wheel="500 1000 500" LR="9" TB="30"/>
+    <ParamSet name="Stroke:Center" wheel="500 1000 500" LR="5" TB="30"/>
+    <ParamSet name="Stroke:Right" wheel="500 1000 500" LR="0" TB="30"/>
+
+    <ParamSet name="Volley:Left" wheel="500 1000 1300" LR="9" TB="30"/>
+    <ParamSet name="Volley:Center" wheel="500 1000 1300" LR="5" TB="30"/>
+    <ParamSet name="Volley:Right" wheel="500 1000 1300" LR="0" TB="30"/>
+  </Level>
+  <Level name="Ama">
+    <ParamSet name="Stroke:Left" wheel="800 1000 800" LR="7" TB="25"/>
+    <ParamSet name="Stroke:Center" wheel="800 1000 800" LR="5" TB="25"/>
+    <ParamSet name="Stroke:Right" wheel="800 1000 800" LR="3" TB="25"/>
+
+    <ParamSet name="Volley:Left" wheel="800 1000 1200" LR="7" TB="25"/>
+    <ParamSet name="Volley:Center" wheel="800 1000 1200" LR="5" TB="25"/>
+    <ParamSet name="Volley:Right" wheel="800 1000 1200" LR="3" TB="25"/>
+  </Level>
+  <Level name="Pro">
+    <ParamSet name="Stroke:Left" wheel="1000 1400 1000" LR="7" TB="7"/>
+    <ParamSet name="Stroke:Center" wheel="1000 1400 1000" LR="5" TB="7"/>
+    <ParamSet name="Stroke:Right" wheel="1000 1400 1000" LR="3" TB="7"/>
+
+    <ParamSet name="Volley:Left" wheel="1000 1400 1500" LR="7" TB="7"/>
+    <ParamSet name="Volley:Center" wheel="1000 1400 1500" LR="5" TB="7"/>
+    <ParamSet name="Volley:Right" wheel="1000 1400 1500" LR="3" TB="7"/>
+  </Level>
+</WheelParams>

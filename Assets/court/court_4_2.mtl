@@ -1,0 +1,41 @@
+# LightWave ExportObj(sekiwada)
+
+newmtl ballboy_usa
+Ns 40
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+Ni 1
+d 0
+illum 1
+map_Kd ballboy_usa.png
+
+newmtl ballgirl_usa
+Ns 40
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+Ni 1
+d 0
+illum 1
+map_Kd ballgirl_usa.png
+
+newmtl linesman_usa
+Ns 40
+Ka 0 0 0
+Kd 1 1 1
+Ks 0 0 0
+Ni 1
+d 0
+illum 1
+map_Kd linesman_usa.png
+
+newmtl referee_usa
+Ns 40
+Ka 0 0 0
+Kd 0.784314 0.784314 0.784314
+Ks 0 0 0
+Ni 1
+d 0
+illum 1
+map_Kd referee_usa.png

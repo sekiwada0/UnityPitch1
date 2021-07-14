@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<params>
+  <system>
+    <PitchingMachine>3Wheel2008</PitchingMachine>
+    <!-- ko:Korean, en:English, ja:Japanese -->
+    <Language>ja</Language>
+    <OPMovie>BevelStart.mp4</OPMovie>
+    <EDMovie>BevelEnd.mp4</EDMovie>
+    <!-- 時間制(Time)か球数制(Ball)か -->
+    <!-- 시간제 (Time) 또는 공 수 제 (Ball) 또는 -->
+    <!--GameLimit>Time</GameLimit-->
+    <GameLimit>Ball</GameLimit>
+    <TimeLimit>300</TimeLimit>
+    <BallLimit>15</BallLimit>
+  </system>
+  <PitchingMachine name="3Wheel2008">
+    <WheelSpeed>1000</WheelSpeed>
+    <CtrlPort>com5</CtrlPort>
+    <WheelPort>com6</WheelPort>
+    <!-- カウントダウンの時間(秒) -->
+    <!-- 카운트 다운 시간 (초) -->
+    <CountDown>2.5</CountDown>
+    <!-- 発射コマンドを送信してから 実際に発射するまでの時間(秒) -->
+    <!-- 발사 명령을 보낸 후 실제로 발사 할 때까지의 시간 (초) -->
+    <PitchONTime>2.2</PitchONTime>
+    <!-- サーブ開始時間(秒) -->
+    <!-- 서브 시작 시간 (초) -->
+    <EnemyServeTime>1</EnemyServeTime>
+    <!-- Result画面を表示している時間(秒) -->
+    <!-- Result 화면을 표시하고있는 시간 (초)-->
+    <ResultDuration>10</ResultDuration>
+    <!-- 発射間隔(秒) -->
+    <ShootInterval>2</ShootInterval>
+    <Level>Biginner</Level>
+  </PitchingMachine>
+</params>
