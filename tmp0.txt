@@ -1,4 +1,11 @@
 
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/sekiwada0/UnityTennis.git
+git push -u origin main
+
 ================================================================
 ■ボレーメニュー <20/11/08>
 Bounce
